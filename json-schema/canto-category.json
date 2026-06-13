@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "category",
+  "required": [
+    "descendants",
+    "id",
+    "name"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Product Category ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product Category Name"
+    },
+    "descendants": {
+      "type": "array",
+      "description": "Array of categories within this category",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

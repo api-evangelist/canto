@@ -1,0 +1,26 @@
+{
+  "name": "New Template",
+  "product_channel_id": 10,
+  "custom_attribute_mappings": [
+    {
+      "name": "Name",
+      "product_custom_attribute_id": 17,
+      "required": false
+    },
+    {
+      "name": "SKU",
+      "product_custom_attribute_id": 18,
+      "required": true
+    },
+    {
+      "name": "Image",
+      "product_custom_attribute_id": 49,
+      "required": false
+    },
+    {
+      "name": "Description",
+      "product_custom_attribute_id": 25,
+      "required": false
+    }
+  ]
+}

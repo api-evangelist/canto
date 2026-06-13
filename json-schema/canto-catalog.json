@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "catalog",
+  "required": [
+    "banner_asset_id",
+    "created_at",
+    "id",
+    "product_attribute_view_id",
+    "product_channel_id",
+    "updated_at",
+    "user_id"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Product Catalog ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product Catalog Name"
+    },
+    "summary": {
+      "type": "string",
+      "description": "Product Catalog Summary"
+    },
+    "product_attribute_view_id": {
+      "type": "number",
+      "description": "ID Of Product Attribute View associated with this Catalog"
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Product Catalog Created At"
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Product Catalog Updated At"
+    },
+    "banner_asset_id": {
+      "type": "string",
+      "description": "ID of Banner Asset of this Catalog Banner"
+    },
+    "user_id": {
+      "type": "string",
+      "description": "ID of User who created this Catalog"
+    },
+    "product_channel_id": {
+      "type": "number",
+      "description": "ID of Product Channel associated with this Catalog for exports"
+    }
+  },
+  "additionalProperties": false
+}

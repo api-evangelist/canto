@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "canto": "https://www.canto.com/api/terms/",
+    "pim": "https://www.canto.com/api/pim/terms/",
+    "id": "@id",
+    "type": "@type",
+    "Product": {
+      "@id": "schema:Product",
+      "@type": "@id"
+    },
+    "product_id": "canto:productId",
+    "product_type": "canto:productType",
+    "product_type_id": "canto:productTypeId",
+    "sku": "schema:sku",
+    "name": "schema:name",
+    "description": "schema:description",
+    "status": "canto:status",
+    "created_at": "schema:dateCreated",
+    "updated_at": "schema:dateModified",
+    "Dimension": {
+      "@id": "canto:Dimension",
+      "@type": "@id"
+    },
+    "dimension_id": "canto:dimensionId",
+    "options": "canto:options",
+    "Catalog": {
+      "@id": "canto:Catalog",
+      "@type": "@id"
+    },
+    "catalog_id": "canto:catalogId",
+    "catalog_name": "canto:catalogName",
+    "Category": {
+      "@id": "schema:CategoryCode",
+      "@type": "@id"
+    },
+    "category_id": "canto:categoryId",
+    "parent_category_id": "canto:parentCategoryId",
+    "Variant": {
+      "@id": "schema:ProductModel",
+      "@type": "@id"
+    },
+    "variant_id": "canto:variantId",
+    "Webhook": {
+      "@id": "canto:Webhook",
+      "@type": "@id"
+    },
+    "webhook_id": "canto:webhookId",
+    "callback_url": "canto:callbackUrl",
+    "events": "canto:events",
+    "Asset": {
+      "@id": "schema:MediaObject",
+      "@type": "@id"
+    },
+    "asset_id": "canto:assetId",
+    "ShareLink": {
+      "@id": "schema:URL",
+      "@type": "@id"
+    },
+    "share_link_id": "canto:shareLinkId",
+    "CustomAttribute": {
+      "@id": "canto:CustomAttribute",
+      "@type": "@id"
+    },
+    "attribute_id": "canto:attributeId",
+    "attribute_type": "canto:attributeType",
+    "ChannelTemplate": {
+      "@id": "canto:ChannelTemplate",
+      "@type": "@id"
+    },
+    "channel_template_id": "canto:channelTemplateId",
+    "channel_name": "canto:channelName"
+  }
+}

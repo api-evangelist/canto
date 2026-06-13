@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "product_share_link_properties",
+  "required": [
+    "custom_name",
+    "expiration_date",
+    "id",
+    "identifier",
+    "product_id",
+    "url",
+    "user_id"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Share Link ID"
+    },
+    "product_id": {
+      "type": "number",
+      "description": "ID of the shared Product"
+    },
+    "identifier": {
+      "type": "string",
+      "description": "Unique identifier for the Share Link"
+    },
+    "custom_name": {
+      "type": "string",
+      "description": "Custom name for the Share Link"
+    },
+    "expiration_date": {
+      "type": "string",
+      "description": "Expiration date for the Share Link"
+    },
+    "url": {
+      "type": "string",
+      "description": "Generated shareable URL"
+    },
+    "user_id": {
+      "type": "number",
+      "description": "ID of the user who created the Share Link"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "id": 7,
+  "name": "Export",
+  "product_channel_id": 10,
+  "file_name_export_format": null,
+  "image_export_size": null,
+  "created_at": "2024-12-11T14:14:34.189Z",
+  "updated_at": "2024-12-11T14:14:34.189Z",
+  "custom_attribute_mappings": [
+    {
+      "name": "Name",
+      "product_custom_attribute_id": 17,
+      "required": true
+    },
+    {
+      "name": "SKU",
+      "product_custom_attribute_id": 18,
+      "required": true
+    },
+    {
+      "name": "Image",
+      "product_custom_attribute_id": 49,
+      "required": false
+    },
+    {
+      "name": "Unmapped Attribute",
+      "product_custom_attribute_id": null,
+      "required": false
+    }
+  ]
+}

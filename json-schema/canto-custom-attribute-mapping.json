@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "custom_attribute_mapping",
+  "required": [
+    "name",
+    "product_custom_attribute_id"
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the custom attribute mapping"
+    },
+    "product_custom_attribute_id": {
+      "type": "number",
+      "nullable": true,
+      "description": "ID of the associated product custom attribute"
+    },
+    "required": {
+      "type": "boolean",
+      "description": "Whether this attribute mapping is required"
+    }
+  },
+  "additionalProperties": false
+}

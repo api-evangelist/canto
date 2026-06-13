@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "dimension",
+  "required": [
+    "dimension_options",
+    "id",
+    "name"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Dimension ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Dimension Name"
+    },
+    "dimension_options": {
+      "type": "array",
+      "description": "Array of this dimension's Options",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

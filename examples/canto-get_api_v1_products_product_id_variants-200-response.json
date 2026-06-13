@@ -1,0 +1,81 @@
+{
+  "variants": [
+    {
+      "id": 1,
+      "dimension_options": {
+        "primary": {
+          "name": "Size",
+          "value": "Small",
+          "dimension_id": 1,
+          "dimension_option_id": 1
+        },
+        "secondary": {
+          "name": "Color",
+          "value": "Red",
+          "dimension_id": 2,
+          "dimension_option_id": 2
+        },
+        "tertiary": null
+      },
+      "product_custom_attributes": [
+        {
+          "name": "name",
+          "value": "Red Small Shirt",
+          "data_type": "text",
+          "product_custom_attribute_id": 1,
+          "product_attribute_group_id": 1
+        },
+        {
+          "name": "sku",
+          "value": "RS-S",
+          "data_type": "text",
+          "product_custom_attribute_id": 2,
+          "product_attribute_group_id": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "dimension_options": {
+        "primary": {
+          "name": "Size",
+          "value": "Large",
+          "dimension_id": 1,
+          "dimension_option_id": 3
+        },
+        "secondary": {
+          "name": "Color",
+          "value": "Blue",
+          "dimension_id": 2,
+          "dimension_option_id": 4
+        },
+        "tertiary": null
+      },
+      "product_custom_attributes": [
+        {
+          "name": "name",
+          "value": "Blue Large Shirt",
+          "data_type": "text",
+          "product_custom_attribute_id": 3,
+          "product_attribute_group_id": 1
+        },
+        {
+          "name": "sku",
+          "value": "BL-L",
+          "data_type": "text",
+          "product_custom_attribute_id": 4,
+          "product_attribute_group_id": 1
+        }
+      ]
+    }
+  ],
+  "product_assets": [
+    {
+      "asset_id": "e29b41d4a7166655440000",
+      "product_ids": [
+        1,
+        2
+      ]
+    }
+  ]
+}

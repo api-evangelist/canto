@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Canto PIM API Vocabulary",
+  "description": "Terms and concepts used in the Canto Product Hub PIM API",
+  "terms": {
+    "id": {
+      "description": "Product Channel Template ID",
+      "source": "schema:product_channel_template"
+    },
+    "name": {
+      "description": "Name of the custom attribute mapping",
+      "source": "schema:custom_attribute_mapping"
+    },
+    "dimension_options": {
+      "description": "Array of this dimension's Options",
+      "source": "schema:dimension"
+    },
+    "summary": {
+      "description": "Product Catalog Summary",
+      "source": "schema:catalog"
+    },
+    "product_attribute_view_id": {
+      "description": "ID Of Product Attribute View associated with this Catalog",
+      "source": "schema:catalog"
+    },
+    "created_at": {
+      "description": "Product Channel Template creation timestamp",
+      "source": "schema:product_channel_template"
+    },
+    "updated_at": {
+      "description": "Product Channel Template last update timestamp",
+      "source": "schema:product_channel_template"
+    },
+    "banner_asset_id": {
+      "description": "ID of Banner Asset of this Catalog Banner",
+      "source": "schema:catalog"
+    },
+    "user_id": {
+      "description": "ID of the user who created the Share Link",
+      "source": "schema:product_share_link_properties"
+    },
+    "product_channel_id": {
+      "description": "Associated Product Channel ID",
+      "source": "schema:product_channel_template"
+    },
+    "descendants": {
+      "description": "Array of categories within this category",
+      "source": "schema:category"
+    },
+    "product_id": {
+      "description": "ID of the shared Product",
+      "source": "schema:product_share_link_properties"
+    },
+    "identifier": {
+      "description": "Unique identifier for the Share Link",
+      "source": "schema:product_share_link_properties"
+    },
+    "custom_name": {
+      "description": "Custom name for the Share Link",
+      "source": "schema:product_share_link_properties"
+    },
+    "expiration_date": {
+      "description": "Expiration date for the Share Link",
+      "source": "schema:product_share_link_properties"
+    },
+    "url": {
+      "description": "Webhook URL endpoint (including protocol e.g., https://)",
+      "source": "schema:webhook_properties"
+    },
+    "resource": {
+      "description": "Resource type to monitor",
+      "source": "schema:webhook_properties"
+    },
+    "event": {
+      "description": "Event to monitor (specific to resource)",
+      "source": "schema:webhook_properties"
+    },
+    "active": {
+      "description": "Whether webhook is actively sending or disabled",
+      "source": "schema:webhook_properties"
+    },
+    "file_name_export_format": {
+      "description": "Export file name format template",
+      "source": "schema:product_channel_template"
+    },
+    "image_export_size": {
+      "description": "Export image size",
+      "source": "schema:product_channel_template"
+    },
+    "custom_attribute_mappings": {
+      "description": "Array of custom attribute mappings for this template",
+      "source": "schema:product_channel_template"
+    },
+    "product_custom_attribute_id": {
+      "description": "ID of the associated product custom attribute",
+      "source": "schema:custom_attribute_mapping"
+    },
+    "required": {
+      "description": "Whether this attribute mapping is required",
+      "source": "schema:custom_attribute_mapping"
+    },
+    "product_channel_templates": {
+      "description": "Array of Product Channel Templates",
+      "source": "schema:product_channel_templates_response"
+    },
+    "dimensions": {
+      "description": "Operations related to dimensions",
+      "source": "tag"
+    },
+    "import_settings": {
+      "description": "Operations related to import_settings",
+      "source": "tag"
+    },
+    "imports": {
+      "description": "Operations related to imports",
+      "source": "tag"
+    },
+    "product_catalogs": {
+      "description": "Operations related to product_catalogs",
+      "source": "tag"
+    },
+    "product_channel_template_products": {
+      "description": "Operations related to product_channel_template_products",
+      "source": "tag"
+    },
+    "bulk_products_channel_templates": {
+      "description": "Operations related to bulk_products_channel_templates",
+      "source": "tag"
+    },
+    "bulk_products_catalogs": {
+      "description": "Operations related to bulk_products_catalogs",
+      "source": "tag"
+    },
+    "product_categories": {
+      "description": "Operations related to product_categories",
+      "source": "tag"
+    },
+    "product_custom_attributes": {
+      "description": "Operations related to product_custom_attributes",
+      "source": "tag"
+    },
+    "product_share_links": {
+      "description": "Operations related to product_share_links",
+      "source": "tag"
+    },
+    "product_types": {
+      "description": "Operations related to product_types",
+      "source": "tag"
+    },
+    "products": {
+      "description": "Operations related to products",
+      "source": "tag"
+    },
+    "variants": {
+      "description": "Operations related to variants",
+      "source": "tag"
+    },
+    "webhook_events": {
+      "description": "Operations related to webhook_events",
+      "source": "tag"
+    },
+    "webhooks": {
+      "description": "Operations related to webhooks",
+      "source": "tag"
+    },
+    "options": {
+      "description": "Operations related to options",
+      "source": "tag"
+    },
+    "filter": {
+      "description": "Operations related to filter",
+      "source": "tag"
+    },
+    "product_catalog_products": {
+      "description": "Operations related to product_catalog_products",
+      "source": "tag"
+    }
+  }
+}

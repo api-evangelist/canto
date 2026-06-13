@@ -1,0 +1,25 @@
+{
+  "name": "Updated Template",
+  "custom_attribute_mappings": [
+    {
+      "name": "Updated Name",
+      "product_custom_attribute_id": 17,
+      "required": true
+    },
+    {
+      "name": "Updated SKU",
+      "product_custom_attribute_id": 18,
+      "required": true
+    },
+    {
+      "name": "Updated Image",
+      "product_custom_attribute_id": 49,
+      "required": false
+    },
+    {
+      "name": "Updated Description",
+      "product_custom_attribute_id": 25,
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "webhook_properties",
+  "required": [
+    "active",
+    "event",
+    "id",
+    "resource",
+    "url"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Webhook ID"
+    },
+    "url": {
+      "type": "string",
+      "description": "Webhook URL endpoint (including protocol e.g., https://)"
+    },
+    "resource": {
+      "type": "string",
+      "description": "Resource type to monitor",
+      "enum": [
+        "product",
+        "variant",
+        "import"
+      ]
+    },
+    "event": {
+      "type": "string",
+      "description": "Event to monitor (specific to resource)",
+      "enum": [
+        "created",
+        "updated",
+        "deleted",
+        "started",
+        "completed",
+        "failed"
+      ]
+    },
+    "active": {
+      "type": "boolean",
+      "description": "Whether webhook is actively sending or disabled"
+    }
+  },
+  "additionalProperties": false
+}

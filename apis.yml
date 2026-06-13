@@ -33,6 +33,8 @@ apis:
         url: https://www.canto.com/api/
       - type: OpenAPI
         url: https://canto1.portal.swaggerhub.com/
+      - type: OpenAPI
+        url: openapi/canto-pim-openapi.json
 common:
   - type: Website
     url: https://www.canto.com/

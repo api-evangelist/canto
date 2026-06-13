@@ -1,0 +1,31 @@
+{
+  "product_channel_templates": [
+    {
+      "id": 1,
+      "name": "First Export Template",
+      "product_channel_id": 1,
+      "file_name_export_format": "Product_Image_[name]_[sku]_[attribute_1].jpg",
+      "image_export_size": "500px",
+      "created_at": "2021-01-01T00:00:00.000Z",
+      "updated_at": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Import Template",
+      "product_channel_id": 2,
+      "file_name_export_format": null,
+      "image_export_size": null,
+      "created_at": "2021-01-01T00:00:00.000Z",
+      "updated_at": "2021-01-01T00:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "name": "Shopify Template",
+      "product_channel_id": 1,
+      "file_name_export_format": null,
+      "image_export_size": null,
+      "created_at": "2021-01-01T00:00:00.000Z",
+      "updated_at": "2021-01-01T00:00:00.000Z"
+    }
+  ]
+}

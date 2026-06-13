@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "product_channel_template",
+  "required": [
+    "id",
+    "name",
+    "product_channel_id",
+    "created_at",
+    "updated_at"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Product Channel Template ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product Channel Template Name"
+    },
+    "product_channel_id": {
+      "type": "number",
+      "description": "Associated Product Channel ID"
+    },
+    "file_name_export_format": {
+      "type": "string",
+      "nullable": true,
+      "description": "Export file name format template"
+    },
+    "image_export_size": {
+      "type": "string",
+      "nullable": true,
+      "description": "Export image size"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Product Channel Template creation timestamp"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Product Channel Template last update timestamp"
+    },
+    "custom_attribute_mappings": {
+      "type": "array",
+      "description": "Array of custom attribute mappings for this template",
+      "items": {
+        "$ref": "#/components/schemas/custom_attribute_mapping"
+      },
+      "example": [
+        {
+          "name": "Name",
+          "product_custom_attribute_id": 17,
+          "required": false
+        },
+        {
+          "name": "SKU",
+          "product_custom_attribute_id": 18,
+          "required": true
+        },
+        {
+          "name": "Image",
+          "product_custom_attribute_id": 49,
+          "required": false
+        },
+        {
+          "name": "Unmapped Attribute",
+          "product_custom_attribute_id": null,
+          "required": false
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

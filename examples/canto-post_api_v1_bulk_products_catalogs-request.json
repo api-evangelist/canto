@@ -1,0 +1,11 @@
+{
+  "operation": "add",
+  "product_catalog_id": 1,
+  "product_ids": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ]
+}

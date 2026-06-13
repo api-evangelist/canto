@@ -1,0 +1,66 @@
+{
+  "id": 1,
+  "dimension_options": {
+    "primary": {
+      "name": "Size",
+      "value": "Small",
+      "dimension_id": 1,
+      "dimension_option_id": 1
+    },
+    "secondary": {
+      "name": "Color",
+      "value": "Red",
+      "dimension_id": 2,
+      "dimension_option_id": 2
+    },
+    "tertiary": null
+  },
+  "product_custom_attributes": [
+    {
+      "name": "name",
+      "value": "Red Small Shirt",
+      "data_type": "text",
+      "product_custom_attribute_id": 1,
+      "product_attribute_group_id": 1
+    },
+    {
+      "name": "sku",
+      "value": "RS-S",
+      "data_type": "text",
+      "product_custom_attribute_id": 2,
+      "product_attribute_group_id": 1
+    },
+    {
+      "name": "Description",
+      "value": "This is a red small shirt",
+      "data_type": "text",
+      "product_custom_attribute_id": 3,
+      "product_attribute_group_id": 2
+    },
+    {
+      "name": "An Image",
+      "value": null,
+      "data_type": "image",
+      "asset_ids": [
+        "abc123",
+        "def234"
+      ],
+      "product_custom_attribute_id": 4,
+      "product_attribute_group_id": 2
+    }
+  ],
+  "product_assets": [
+    {
+      "asset_id": "e29b41d4a7166655440000",
+      "product_ids": [
+        1
+      ]
+    },
+    {
+      "asset_id": "f47ac10b58cc4372a5",
+      "product_ids": [
+        1
+      ]
+    }
+  ]
+}

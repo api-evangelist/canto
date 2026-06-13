@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "product_channel_template_summary",
+  "required": [
+    "id",
+    "name",
+    "product_channel_id",
+    "created_at",
+    "updated_at"
+  ],
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number",
+      "description": "Product Channel Template ID"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product Channel Template Name"
+    },
+    "product_channel_id": {
+      "type": "number",
+      "description": "Associated Product Channel ID"
+    },
+    "file_name_export_format": {
+      "type": "string",
+      "nullable": true,
+      "description": "Export file name format template"
+    },
+    "image_export_size": {
+      "type": "string",
+      "nullable": true,
+      "description": "Export image size"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Product Channel Template creation timestamp"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Product Channel Template last update timestamp"
+    }
+  },
+  "additionalProperties": false
+}
