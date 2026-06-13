@@ -1,0 +1,16 @@
+name: Canto API Rate Limits
+description: Rate limits for the Canto REST API. Each endpoint has an assigned rate limit level that defines how many requests can be made per minute. When a rate limit is exceeded the API returns HTTP 429 Too Many Requests.
+url: https://api.canto.com/
+enforcement: HTTP 429 Too Many Requests returned when limit is exceeded
+
+levels:
+  - level: 4
+    requests_per_minute: 200
+    description: Standard rate limit level applied to common search and retrieval endpoints. For example, the Search under a folder endpoint operates at this level.
+
+notes:
+  - Each API endpoint has its own rate limit level assignment
+  - Rate limits are measured per minute per account
+  - Exceeding the limit triggers an HTTP 429 error response
+  - Contact Canto support for rate limit increases or enterprise-tier adjustments
+  - Full rate limit level assignments per endpoint are documented in the official API portal at api.canto.com

@@ -1,0 +1,35 @@
+name: Canto FinOps
+description: Financial operations guidance for managing Canto digital asset management API costs. Canto uses enterprise subscription pricing rather than consumption-based API billing, so FinOps focus is on plan selection, user seat management, and storage optimization.
+url: https://www.canto.com/pricing/
+
+pricing_model:
+  type: subscription
+  billing_cycle: annual
+  public_pricing: false
+  contact_sales_required: true
+  estimated_range_usd_per_year:
+    low: 15000
+    high: 200000
+    notes: Industry estimates only; actual pricing determined by sales negotiation based on users, storage, and features needed.
+
+cost_drivers:
+  - name: Plan Tier
+    description: The plan tier (Core Essentials, Enhanced Collaboration, Omni Brand, Advanced) is the primary cost driver. Higher tiers include more AI features, integrations, and storage.
+  - name: User Seats
+    description: Regular users and power users may be priced differently. Power user seats have historically been priced around $1,000 per seat per year.
+  - name: Storage Volume
+    description: Storage needs scale with the plan; larger asset libraries require higher tiers or add-on storage.
+  - name: Integration Complexity
+    description: Advanced tier provides comprehensive CRM and ERP integration capabilities and may carry a premium.
+
+optimization_recommendations:
+  - Audit active power user seats regularly; downgrade inactive accounts to regular user status to reduce seat costs.
+  - Evaluate which plan tier features your organization actively uses before renewing to avoid paying for unused capabilities.
+  - Negotiate annual contracts upfront for better pricing versus month-to-month arrangements.
+  - Use Canto's built-in Smart Albums and automated workflows to maximize value from higher-tier plans already in use.
+  - Monitor API usage against rate limits to ensure integrations do not hit throttle limits that require costly architectural changes.
+
+contacts:
+  - type: Sales
+    url: https://www.canto.com/contact/
+    notes: Contact sales for custom pricing quotes and enterprise negotiations.

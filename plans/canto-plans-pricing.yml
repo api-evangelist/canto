@@ -1,0 +1,49 @@
+name: Canto Plans and Pricing
+description: Pricing plans for Canto digital asset management platform. Canto does not publish specific pricing publicly and requires contacting sales for a custom quote. Industry estimates place annual costs at $15,000 to $200,000+ depending on tier and organization size.
+url: https://www.canto.com/pricing/
+plans:
+
+  - name: Core Essentials
+    description: Foundational digital asset management for teams that need a starting point for organizing, finding, and securing digital content.
+    label: DAM
+    contact_sales: true
+    features:
+      - Secure asset storage
+      - Intuitive search functionality
+      - Trusted security protocols
+      - Basic asset organization
+
+  - name: Enhanced Collaboration
+    description: Purpose-built for established organizations needing streamlined workflows and team collaboration tools, designed to scale with team needs.
+    label: DAM PLUS
+    contact_sales: true
+    features:
+      - Centralized review and approval with proofing
+      - Dynamic brand templates
+      - AI-powered search capabilities
+      - Customizable brand portals for internal and external sharing
+      - All Core Essentials features
+
+  - name: Omni Brand Solution
+    description: Developed to empower product-driven brands, strengthening brand presence, expanding reach, and optimizing omnichannel sales.
+    label: DAM for Products
+    contact_sales: true
+    features:
+      - Consistent brand representation across channels
+      - Unified content and product data management
+      - Customizable product catalogs
+      - Data-driven insights
+      - All Enhanced Collaboration features
+
+  - name: Advanced
+    description: Enterprise-grade DAM solution with AI capabilities, extensive storage, and comprehensive integration support for CRM and ERP systems.
+    label: DAM PRO
+    contact_sales: true
+    features:
+      - AI-powered search and automated tagging
+      - Extensive storage capacity
+      - Comprehensive integration capabilities for CRM and ERP
+      - Multi-language support
+      - Enhanced security protocols
+      - Dedicated onboarding and implementation support
+      - All Omni Brand Solution features

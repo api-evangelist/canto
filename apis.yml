@@ -1,0 +1,61 @@
+aid: canto
+name: Canto
+description: Canto is a digital asset management (DAM) platform offering a fully documented REST API for organizing, tagging, distributing, and sharing brand assets including images, videos, and documents across teams and channels. The API uses OAuth 2.0 for authentication and provides endpoints for asset search, metadata management, folder and album operations, automated workflows, and asset distribution.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/apis.yml
+created: '2026-06-13'
+modified: '2026-06-13'
+specificationVersion: '0.19'
+tags:
+  - Digital Asset Management
+  - DAM
+  - Brand Assets
+  - Images
+  - Videos
+  - Documents
+  - Media Library
+  - Asset Distribution
+apis:
+  - name: Canto REST API
+    description: The Canto REST API enables developers to connect Canto media libraries with other applications. It supports asset search, metadata management, folder and album operations, automated workflows, and asset distribution. Authentication uses OAuth 2.0 with support for both authorization code and client credentials grant types.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://www.canto.com/api/
+    baseURL: https://api.canto.com/
+    tags:
+      - Digital Asset Management
+      - Asset Search
+      - Metadata
+      - Folders
+      - Albums
+      - OAuth 2.0
+    properties:
+      - type: Documentation
+        url: https://www.canto.com/api/
+      - type: OpenAPI
+        url: https://canto1.portal.swaggerhub.com/
+common:
+  - type: Website
+    url: https://www.canto.com/
+  - type: Documentation
+    url: https://www.canto.com/api/
+  - type: GitHubOrg
+    url: https://github.com/canto
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/canto
+  - type: Blog
+    url: https://www.canto.com/blog/
+  - type: Pricing
+    url: https://www.canto.com/pricing/
+  - type: StatusPage
+    url: https://www.saashub.com/canto-status
+  - type: X
+    url: https://x.com/canto
+  - type: Plans
+    url: plans/canto-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/canto-rate-limits.yml
+  - type: FinOps
+    url: finops/canto-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
