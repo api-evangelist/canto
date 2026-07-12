@@ -36,6 +36,12 @@ apis:
       - type: OpenAPI
         url: openapi/canto-pim-openapi.json
 common:
+  - type: TrustCenter
+    url: security/canto-trust-center.yml
+  - type: DomainSecurity
+    url: security/canto-domain-security.yml
+  - type: Authentication
+    url: authentication/canto-authentication.yml
   - type: Website
     url: https://www.canto.com/
   - type: Documentation
