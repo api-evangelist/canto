@@ -2,13 +2,11 @@
   "repo": "canto",
   "feeds": [
     {
-      "source": "https://www.canto.com/blog/",
-      "feed_url": "",
-      "saved": 1,
-      "method": "agent-scrape"
+      "source": "https://www.linkedin.com/company/canto",
+      "error": "HTTPError"
     }
   ],
-  "fetched": "2026-06-27T12:30:19Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "post_count": 3,
   "agent_pulled": "2026-06-27"
 }
