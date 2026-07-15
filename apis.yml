@@ -36,6 +36,8 @@ apis:
       - type: OpenAPI
         url: openapi/canto-pim-openapi.json
 common:
+  - type: AgenticAccess
+    url: agentic-access/canto-agentic-access.yml
   - type: TrustCenter
     url: security/canto-trust-center.yml
   - type: DomainSecurity
