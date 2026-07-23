@@ -1,0 +1,496 @@
+openapi: 3.0.1
+info:
+  title: Canto PIM bulk_products_catalogs webhooks API
+  description: "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n"
+  version: v1.0.1
+servers:
+- url: https://{tenantSubdomain}.{region}/api/v1/pim/
+  variables:
+    tenantSubdomain:
+      default: demo
+    region:
+      enum:
+      - canto.com
+      - canto.global
+      - canto.de
+      - au.canto.com
+      - ca.canto.com
+      default: canto.com
+security:
+- bearerAuth: []
+tags:
+- name: webhooks
+  description: "Webhooks are used to notify your application when certain events occur within the system.\nThey can be configured to send a POST request to a specified URL when a specific event happens.\nAvailable resources and the events they support:\n- product\n  - created\n  - updated\n  - deleted\n- variant\n  - created\n  - updated\n  - deleted\n- import\n  - started\n  - completed\n  - failed\n\nYou can validate the payload using the +X-Webhook-Signature+ header. It's a SHA256 hash of the payload, signed with the secret key.\n"
+paths:
+  /webhooks:
+    get:
+      tags:
+      - webhooks
+      summary: Get Webhooks
+      description: '    List all registered webhooks
+
+        '
+      operationId: get_api_v1_webhooks
+      responses:
+        '200':
+          description: List of webhooks
+          content:
+            '*/*':
+              schema:
+                required:
+                - webhooks
+                type: object
+                properties:
+                  webhooks:
+                    type: array
+                    description: Array of Webhooks
+                    items:
+                      type: string
+                additionalProperties: false
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    post:
+      tags:
+      - webhooks
+      summary: Create Webhook
+      description: '    Register a new webhook
+
+        '
+      operationId: post_api_v1_webhooks
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - event
+              - resource
+              - url
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Webhook URL endpoint (including protocol e.g., https://)
+                resource:
+                  type: string
+                  description: Resource type to monitor
+                  enum:
+                  - product
+                  - variant
+                  - import
+                event:
+                  type: string
+                  description: Event to monitor (specific to resource)
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - completed
+                  - failed
+                active:
+                  type: boolean
+                  description: Whether webhook is actively sending or disabled
+                secret:
+                  type: string
+                  description: Your secret token for webhook authentication
+          multipart/form-data:
+            schema:
+              required:
+              - event
+              - resource
+              - url
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Webhook URL endpoint (including protocol e.g., https://)
+                resource:
+                  type: string
+                  description: Resource type to monitor
+                  enum:
+                  - product
+                  - variant
+                  - import
+                event:
+                  type: string
+                  description: Event to monitor (specific to resource)
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - completed
+                  - failed
+                active:
+                  type: boolean
+                  description: Whether webhook is actively sending or disabled
+                secret:
+                  type: string
+                  description: Your secret token for webhook authentication
+        required: true
+      responses:
+        '201':
+          description: Successfully created Webhook
+          content:
+            '*/*':
+              schema:
+                required:
+                - active
+                - event
+                - id
+                - resource
+                - secret
+                - url
+                type: object
+                properties:
+                  id:
+                    type: number
+                    description: Webhook ID
+                  url:
+                    type: string
+                    description: Webhook URL endpoint (including protocol e.g., https://)
+                  resource:
+                    type: string
+                    description: Resource type to monitor
+                    enum:
+                    - product
+                    - variant
+                    - import
+                  event:
+                    type: string
+                    description: Event to monitor (specific to resource)
+                    enum:
+                    - created
+                    - updated
+                    - deleted
+                    - started
+                    - completed
+                    - failed
+                  active:
+                    type: boolean
+                    description: Whether webhook is actively sending or disabled
+                  secret:
+                    type: string
+                    description: Secret key that you provided or one we generated (store this securely, there's no way to retrieve it again)
+                additionalProperties: false
+        '400':
+          description: The request parameters were invalid. References to `nil` means empty string or `null` value
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '422':
+          description: There was an error creating your Webhook
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+  /webhooks/{id}:
+    get:
+      tags:
+      - webhooks
+      summary: Get Webhook
+      description: '    Get details of a specific webhook
+
+        '
+      operationId: get_api_v1_webhooks_id
+      parameters:
+      - name: id
+        in: path
+        description: Webhook ID
+        required: true
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Webhook details
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/webhook_properties'
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Webhook ID not found
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    put:
+      tags:
+      - webhooks
+      summary: Update Webhook
+      description: '    Fully update a webhook
+
+        '
+      operationId: put_api_v1_webhooks_id
+      parameters:
+      - name: id
+        in: path
+        description: Webhook ID
+        required: true
+        schema:
+          type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Webhook URL endpoint (including protocol e.g., https://)
+                resource:
+                  type: string
+                  description: Resource type to monitor
+                  enum:
+                  - product
+                  - variant
+                  - import
+                event:
+                  type: string
+                  description: Event to monitor (specific to resource)
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - completed
+                  - failed
+                active:
+                  type: boolean
+                  description: Whether webhook is actively sending or disabled
+                secret:
+                  type: string
+                  description: Your secret token for webhook authentication
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Webhook URL endpoint (including protocol e.g., https://)
+                resource:
+                  type: string
+                  description: Resource type to monitor
+                  enum:
+                  - product
+                  - variant
+                  - import
+                event:
+                  type: string
+                  description: Event to monitor (specific to resource)
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - completed
+                  - failed
+                active:
+                  type: boolean
+                  description: Whether webhook is actively sending or disabled
+                secret:
+                  type: string
+                  description: Your secret token for webhook authentication
+      responses:
+        '200':
+          description: Updated webhook
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/webhook_properties'
+        '400':
+          description: The request parameters were invalid. References to `nil` means empty string or `null` value
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Webhook ID not found
+          content: {}
+        '422':
+          description: There was an error creating your Webhook
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    delete:
+      tags:
+      - webhooks
+      summary: Delete Webhook
+      description: '    Remove a webhook
+
+        '
+      operationId: delete_api_v1_webhooks_id
+      parameters:
+      - name: id
+        in: path
+        description: Webhook ID
+        required: true
+        schema:
+          type: number
+      responses:
+        '204':
+          description: Webhook successfully deleted
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Webhook ID not found
+          content: {}
+        '422':
+          description: There was an error deleting your Webhook
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    patch:
+      tags:
+      - webhooks
+      summary: Update Webhook
+      description: '    Partially update webhook details
+
+        '
+      operationId: patch_api_v1_webhooks_id
+      parameters:
+      - name: id
+        in: path
+        description: Webhook ID
+        required: true
+        schema:
+          type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Webhook URL endpoint (including protocol e.g., https://)
+                resource:
+                  type: string
+                  description: Resource type to monitor
+                  enum:
+                  - product
+                  - variant
+                  - import
+                event:
+                  type: string
+                  description: Event to monitor (specific to resource)
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - completed
+                  - failed
+                active:
+                  type: boolean
+                  description: Whether webhook is actively sending or disabled
+                secret:
+                  type: string
+                  description: Your secret token for webhook authentication
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                url:
+                  type: string
+                  description: Webhook URL endpoint (including protocol e.g., https://)
+                resource:
+                  type: string
+                  description: Resource type to monitor
+                  enum:
+                  - product
+                  - variant
+                  - import
+                event:
+                  type: string
+                  description: Event to monitor (specific to resource)
+                  enum:
+                  - created
+                  - updated
+                  - deleted
+                  - started
+                  - completed
+                  - failed
+                active:
+                  type: boolean
+                  description: Whether webhook is actively sending or disabled
+                secret:
+                  type: string
+                  description: Your secret token for webhook authentication
+      responses:
+        '200':
+          description: Updated webhook
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/webhook_properties'
+        '400':
+          description: The request parameters were invalid. References to `nil` means empty string or `null` value
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Webhook ID not found
+          content: {}
+        '422':
+          description: There was an error creating your Webhook
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+components:
+  schemas:
+    webhook_properties:
+      required:
+      - active
+      - event
+      - id
+      - resource
+      - url
+      type: object
+      properties:
+        id:
+          type: number
+          description: Webhook ID
+        url:
+          type: string
+          description: Webhook URL endpoint (including protocol e.g., https://)
+        resource:
+          type: string
+          description: Resource type to monitor
+          enum:
+          - product
+          - variant
+          - import
+        event:
+          type: string
+          description: Event to monitor (specific to resource)
+          enum:
+          - created
+          - updated
+          - deleted
+          - started
+          - completed
+          - failed
+        active:
+          type: boolean
+          description: Whether webhook is actively sending or disabled
+      additionalProperties: false
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: AccessToken
+x-original-swagger-version: '2.0'

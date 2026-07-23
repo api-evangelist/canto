@@ -1,0 +1,1471 @@
+openapi: 3.0.1
+info:
+  title: Canto PIM bulk_products_catalogs products API
+  description: "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n"
+  version: v1.0.1
+servers:
+- url: https://{tenantSubdomain}.{region}/api/v1/pim/
+  variables:
+    tenantSubdomain:
+      default: demo
+    region:
+      enum:
+      - canto.com
+      - canto.global
+      - canto.de
+      - au.canto.com
+      - ca.canto.com
+      default: canto.com
+security:
+- bearerAuth: []
+tags:
+- name: products
+paths:
+  /products:
+    get:
+      tags:
+      - products
+      summary: Get Products
+      description: '    List all products in the catalog
+
+        '
+      operationId: get_api_v1_products
+      responses:
+        '200':
+          description: Successfully fetched Products
+          headers:
+            page-items:
+              description: Number of items per page
+              schema:
+                type: integer
+            link:
+              description: Standard link header defined in RFC 8228. Contains links for first, last, next, and prev pages with respective `rel` attributes
+              schema:
+                type: string
+            current-page:
+              description: Current page number
+              schema:
+                type: integer
+            total-count:
+              description: Total number of items
+              schema:
+                type: integer
+            total-pages:
+              description: Total number of pages
+              schema:
+                type: integer
+          content:
+            '*/*':
+              schema:
+                required:
+                - products
+                type: object
+                properties:
+                  products:
+                    type: array
+                    description: Array of Products
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          description: Product ID
+                        product_category_id:
+                          type: integer
+                          description: Product category ID
+                        product_type_id:
+                          type: integer
+                          description: Product type ID
+                        has_variants:
+                          type: boolean
+                          description: Whether the product has variants
+                        dimension1_id:
+                          type: integer
+                          nullable: true
+                          description: First dimension ID
+                        dimension2_id:
+                          type: integer
+                          nullable: true
+                          description: Second dimension ID
+                        dimension3_id:
+                          type: integer
+                          nullable: true
+                          description: Third dimension ID
+                        created_at:
+                          type: string
+                          format: date-time
+                          description: Creation timestamp
+                        updated_at:
+                          type: string
+                          format: date-time
+                          description: Last update timestamp
+                        user_id:
+                          type: string
+                          description: User ID associated with the product
+                        product_custom_attributes:
+                          type: array
+                          description: Array of custom attributes for the product
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                                description: Attribute name
+                              value:
+                                type: string
+                                description: Attribute value
+                              data_type:
+                                type: string
+                                description: Data type of the attribute
+                              product_custom_attribute_id:
+                                type: integer
+                                description: Custom attribute ID
+                              product_attribute_group_id:
+                                type: integer
+                                nullable: true
+                                description: Attribute group ID
+                        variants:
+                          type: array
+                          description: Array of product variants
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: integer
+                                description: Variant ID
+                              dimension_options:
+                                type: object
+                                description: Dimension options for the variant
+                                properties:
+                                  primary:
+                                    type: object
+                                    nullable: true
+                                    properties:
+                                      name:
+                                        type: string
+                                        description: Dimension name
+                                      value:
+                                        type: string
+                                        description: Dimension value
+                                      dimension_id:
+                                        type: integer
+                                        description: Dimension ID
+                                      dimension_option_id:
+                                        type: integer
+                                        description: Dimension option ID
+                                  secondary:
+                                    type: object
+                                    nullable: true
+                                    properties:
+                                      name:
+                                        type: string
+                                        description: Dimension name
+                                      value:
+                                        type: string
+                                        description: Dimension value
+                                      dimension_id:
+                                        type: integer
+                                        description: Dimension ID
+                                      dimension_option_id:
+                                        type: integer
+                                        description: Dimension option ID
+                                  tertiary:
+                                    type: object
+                                    nullable: true
+                                    properties:
+                                      name:
+                                        type: string
+                                        description: Dimension name
+                                      value:
+                                        type: string
+                                        description: Dimension value
+                                      dimension_id:
+                                        type: integer
+                                        description: Dimension ID
+                                      dimension_option_id:
+                                        type: integer
+                                        description: Dimension option ID
+                              product_custom_attributes:
+                                type: array
+                                description: Array of custom attributes for the variant
+                                items:
+                                  type: object
+                                  properties:
+                                    name:
+                                      type: string
+                                      description: Attribute name
+                                    value:
+                                      type: string
+                                      description: Attribute value
+                                    data_type:
+                                      type: string
+                                      description: Data type of the attribute
+                                    product_custom_attribute_id:
+                                      type: integer
+                                      description: Custom attribute ID
+                                    product_attribute_group_id:
+                                      type: integer
+                                      nullable: true
+                                      description: Attribute group ID
+                additionalProperties: false
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    post:
+      tags:
+      - products
+      summary: Create Product
+      description: '    Add a new product
+
+        '
+      operationId: post_api_v1_products
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_category_id:
+                  type: number
+                  description: Product Category ID
+                product_type_id:
+                  type: number
+                  description: Product Type ID
+                has_variants:
+                  type: boolean
+                  description: Whether there are variants associated with this product
+                dimension1_id:
+                  type: number
+                  description: Primary Dimension ID
+                dimension2_id:
+                  type: number
+                  description: Secondary Dimension ID
+                dimension3_id:
+                  type: number
+                  description: Tertiary Dimension ID
+                product_custom_attributes:
+                  type: array
+                  description: Array of product attributes' data
+                  items:
+                    type: object
+                    properties:
+                      product_custom_attribute_id:
+                        type: number
+                      value:
+                        type: string
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                product_category_id:
+                  type: number
+                  description: Product Category ID
+                product_type_id:
+                  type: number
+                  description: Product Type ID
+                has_variants:
+                  type: boolean
+                  description: Whether there are variants associated with this product
+                dimension1_id:
+                  type: number
+                  description: Primary Dimension ID
+                dimension2_id:
+                  type: number
+                  description: Secondary Dimension ID
+                dimension3_id:
+                  type: number
+                  description: Tertiary Dimension ID
+                product_custom_attributes:
+                  type: array
+                  description: Array of product attributes' data
+                  items:
+                    type: string
+      responses:
+        '201':
+          description: Successfully created Product
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  product_category_id:
+                    type: integer
+                    example: 1
+                  product_type_id:
+                    type: integer
+                    example: 1
+                  has_variants:
+                    type: boolean
+                    example: true
+                  dimension1_id:
+                    type: integer
+                    example: 1
+                  dimension2_id:
+                    type: integer
+                    example: 2
+                  dimension3_id:
+                    type: integer
+                    example: 3
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  user_id:
+                    type: string
+                    example: 123e4567e89b12d3a456
+                  product_custom_attributes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        value:
+                          type: string
+                          nullable: true
+                        data_type:
+                          type: string
+                        product_custom_attribute_id:
+                          type: integer
+                        product_attribute_group_id:
+                          type: integer
+                          nullable: true
+                        asset_ids:
+                          type: array
+                          items:
+                            type: string
+                    example:
+                    - name: name
+                      value: Product 1
+                      data_type: text
+                      product_custom_attribute_id: 1
+                      product_attribute_group_id: null
+                    - name: sku
+                      value: SKU1
+                      data_type: text
+                      product_custom_attribute_id: 2
+                      product_attribute_group_id: null
+                    - name: Price
+                      value: '10.00'
+                      data_type: text
+                      product_custom_attribute_id: 3
+                      product_attribute_group_id: 1
+                    - name: An Image
+                      value: null
+                      data_type: image
+                      asset_ids:
+                      - abc123
+                      - def234
+                      product_custom_attribute_id: 4
+                      product_attribute_group_id: 2
+                  variants:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        dimension_options:
+                          type: object
+                          properties:
+                            primary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            secondary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            tertiary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                        product_custom_attributes:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              value:
+                                type: string
+                                nullable: true
+                              data_type:
+                                type: string
+                              product_custom_attribute_id:
+                                type: integer
+                              product_attribute_group_id:
+                                type: integer
+                                nullable: true
+                              asset_ids:
+                                type: array
+                                items:
+                                  type: string
+                    example:
+                    - id: 3
+                      dimension_options:
+                        primary:
+                          name: Color
+                          value: Blue
+                          dimension_id: 1
+                          dimension_option_id: 1
+                        secondary:
+                          name: Size
+                          value: Large
+                          dimension_id: 2
+                          dimension_option_id: 2
+                        tertiary: null
+                      product_custom_attributes:
+                      - name: name
+                        value: Product 1 - Blue/Large
+                        data_type: text
+                        product_custom_attribute_id: 1
+                        product_attribute_group_id: null
+                      - name: sku
+                        value: 1-blue-large
+                        data_type: text
+                        product_custom_attribute_id: 2
+                        product_attribute_group_id: null
+                      - name: Price
+                        value: '12.00'
+                        data_type: text
+                        product_custom_attribute_id: 3
+                        product_attribute_group_id: 1
+                  product_assets:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        asset_id:
+                          type: string
+                        product_ids:
+                          type: array
+                          items:
+                            type: integer
+                    example:
+                    - asset_id: e29b41d4a7166655440000
+                      product_ids:
+                      - 1
+                      - 2
+                      - 3
+                      - 4
+                      - 5
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '422':
+          description: There was an error creating your Product
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+  /products/{id}:
+    get:
+      tags:
+      - products
+      summary: Get Product
+      description: '    Retrieve details for a specific product by ID
+
+        '
+      operationId: get_api_v1_products_id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Successfully fetched Product
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  product_category_id:
+                    type: integer
+                    example: 1
+                  product_type_id:
+                    type: integer
+                    example: 1
+                  has_variants:
+                    type: boolean
+                    example: true
+                  dimension1_id:
+                    type: integer
+                    example: 1
+                  dimension2_id:
+                    type: integer
+                    example: 2
+                  dimension3_id:
+                    type: integer
+                    example: 3
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  user_id:
+                    type: string
+                    example: 123e4567e89b12d3a456
+                  product_custom_attributes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        value:
+                          type: string
+                          nullable: true
+                        data_type:
+                          type: string
+                        product_custom_attribute_id:
+                          type: integer
+                        product_attribute_group_id:
+                          type: integer
+                          nullable: true
+                        asset_ids:
+                          type: array
+                          items:
+                            type: string
+                    example:
+                    - name: name
+                      value: Product 1
+                      data_type: text
+                      product_custom_attribute_id: 1
+                      product_attribute_group_id: null
+                    - name: sku
+                      value: SKU1
+                      data_type: text
+                      product_custom_attribute_id: 2
+                      product_attribute_group_id: null
+                    - name: Price
+                      value: '10.00'
+                      data_type: text
+                      product_custom_attribute_id: 3
+                      product_attribute_group_id: 1
+                    - name: An Image
+                      value: null
+                      data_type: image
+                      asset_ids:
+                      - abc123
+                      - def234
+                      product_custom_attribute_id: 4
+                      product_attribute_group_id: 2
+                  variants:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        dimension_options:
+                          type: object
+                          properties:
+                            primary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            secondary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            tertiary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                        product_custom_attributes:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              value:
+                                type: string
+                              data_type:
+                                type: string
+                              product_custom_attribute_id:
+                                type: integer
+                              product_attribute_group_id:
+                                type: integer
+                                nullable: true
+                    example:
+                    - id: 5
+                      dimension_options:
+                        primary:
+                          name: Color
+                          value: Red
+                          dimension_id: 1
+                          dimension_option_id: 1
+                        secondary:
+                          name: Size
+                          value: Small
+                          dimension_id: 2
+                          dimension_option_id: 2
+                        tertiary: null
+                      product_custom_attributes:
+                      - name: name
+                        value: Product 1 - Red/Small
+                        data_type: text
+                        product_custom_attribute_id: 1
+                        product_attribute_group_id: null
+                      - name: sku
+                        value: 1-red-small
+                        data_type: text
+                        product_custom_attribute_id: 2
+                        product_attribute_group_id: null
+                      - name: Price
+                        value: '11.00'
+                        data_type: text
+                        product_custom_attribute_id: 3
+                        product_attribute_group_id: 1
+                    - id: 6
+                      dimension_options:
+                        primary:
+                          name: Color
+                          value: Blue
+                          dimension_id: 1
+                          dimension_option_id: 1
+                        secondary:
+                          name: Size
+                          value: Large
+                          dimension_id: 2
+                          dimension_option_id: 2
+                        tertiary: null
+                      product_custom_attributes:
+                      - name: name
+                        value: Product 1 - Blue/Large
+                        data_type: text
+                        product_custom_attribute_id: 1
+                        product_attribute_group_id: null
+                      - name: sku
+                        value: 1-blue-large
+                        data_type: text
+                        product_custom_attribute_id: 2
+                        product_attribute_group_id: null
+                      - name: Price
+                        value: '12.00'
+                        data_type: text
+                        product_custom_attribute_id: 3
+                        product_attribute_group_id: 1
+                  product_assets:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        asset_id:
+                          type: string
+                        product_ids:
+                          type: array
+                          items:
+                            type: integer
+                    example:
+                    - asset_id: e29b41d4a7166655440000
+                      product_ids:
+                      - 1
+                      - 2
+                      - 3
+                      - 4
+                      - 5
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID not found or invalid
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    put:
+      tags:
+      - products
+      summary: Update Product
+      description: '    Update a product
+
+        '
+      operationId: put_api_v1_products_id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_category_id:
+                  type: number
+                  description: Product Category ID
+                product_type_id:
+                  type: number
+                  description: Product Type ID
+                has_variants:
+                  type: boolean
+                  description: Whether there are variants associated with this product
+                dimension1_id:
+                  type: number
+                  description: Primary Dimension ID
+                dimension2_id:
+                  type: number
+                  description: Secondary Dimension ID
+                dimension3_id:
+                  type: number
+                  description: Tertiary Dimension ID
+                product_custom_attributes:
+                  type: array
+                  description: Array of product attributes' data
+                  items:
+                    type: object
+                    properties:
+                      product_custom_attribute_id:
+                        type: number
+                      value:
+                        type: string
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                product_category_id:
+                  type: number
+                  description: Product Category ID
+                product_type_id:
+                  type: number
+                  description: Product Type ID
+                has_variants:
+                  type: boolean
+                  description: Whether there are variants associated with this product
+                dimension1_id:
+                  type: number
+                  description: Primary Dimension ID
+                dimension2_id:
+                  type: number
+                  description: Secondary Dimension ID
+                dimension3_id:
+                  type: number
+                  description: Tertiary Dimension ID
+                product_custom_attributes:
+                  type: array
+                  description: Array of product attributes' data
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Successfully updated Product
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  product_category_id:
+                    type: integer
+                    example: 1
+                  product_type_id:
+                    type: integer
+                    example: 1
+                  has_variants:
+                    type: boolean
+                    example: true
+                  dimension1_id:
+                    type: integer
+                    example: 1
+                  dimension2_id:
+                    type: integer
+                    example: 2
+                  dimension3_id:
+                    type: integer
+                    example: 3
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  user_id:
+                    type: string
+                    example: 123e4567e89b12d3a456
+                  product_custom_attributes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        value:
+                          type: string
+                          nullable: true
+                        data_type:
+                          type: string
+                        product_custom_attribute_id:
+                          type: integer
+                        product_attribute_group_id:
+                          type: integer
+                          nullable: true
+                        asset_ids:
+                          type: array
+                          items:
+                            type: string
+                    example:
+                    - name: name
+                      value: Product 1
+                      data_type: text
+                      product_custom_attribute_id: 1
+                      product_attribute_group_id: null
+                    - name: sku
+                      value: SKU1
+                      data_type: text
+                      product_custom_attribute_id: 2
+                      product_attribute_group_id: null
+                    - name: Price
+                      value: '10.00'
+                      data_type: text
+                      product_custom_attribute_id: 3
+                      product_attribute_group_id: 1
+                    - name: An Image
+                      value: null
+                      data_type: image
+                      asset_ids:
+                      - abc123
+                      - def234
+                      product_custom_attribute_id: 4
+                      product_attribute_group_id: 2
+                  variants:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        dimension_options:
+                          type: object
+                          properties:
+                            primary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            secondary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            tertiary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                        product_custom_attributes:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              value:
+                                type: string
+                                nullable: true
+                              data_type:
+                                type: string
+                              product_custom_attribute_id:
+                                type: integer
+                              product_attribute_group_id:
+                                type: integer
+                                nullable: true
+                              asset_ids:
+                                type: array
+                                items:
+                                  type: string
+                    example:
+                    - id: 3
+                      dimension_options:
+                        primary:
+                          name: Color
+                          value: Blue
+                          dimension_id: 1
+                          dimension_option_id: 1
+                        secondary:
+                          name: Size
+                          value: Large
+                          dimension_id: 2
+                          dimension_option_id: 2
+                        tertiary: null
+                      product_custom_attributes:
+                      - name: name
+                        value: Product 1 - Blue/Large
+                        data_type: text
+                        product_custom_attribute_id: 1
+                        product_attribute_group_id: null
+                      - name: sku
+                        value: 1-blue-large
+                        data_type: text
+                        product_custom_attribute_id: 2
+                        product_attribute_group_id: null
+                      - name: Price
+                        value: '12.00'
+                        data_type: text
+                        product_custom_attribute_id: 3
+                        product_attribute_group_id: 1
+                  product_assets:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        asset_id:
+                          type: string
+                        product_ids:
+                          type: array
+                          items:
+                            type: integer
+                    example:
+                    - asset_id: e29b41d4a7166655440000
+                      product_ids:
+                      - 1
+                      - 2
+                      - 3
+                      - 4
+                      - 5
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID not found or invalid
+          content: {}
+        '422':
+          description: There was an error updating your Product
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    delete:
+      tags:
+      - products
+      summary: Delete Product
+      description: '    Delete a product from the catalog
+
+        '
+      operationId: delete_api_v1_products_id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: number
+      responses:
+        '204':
+          description: Successfully deleted Product
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID not found
+          content: {}
+        '422':
+          description: There was an error throwing your Product in the trash or it's already in the trash
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    patch:
+      tags:
+      - products
+      summary: Update Product
+      description: '    Update a product
+
+        '
+      operationId: patch_api_v1_products_id
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                product_category_id:
+                  type: number
+                  description: Product Category ID
+                product_type_id:
+                  type: number
+                  description: Product Type ID
+                has_variants:
+                  type: boolean
+                  description: Whether there are variants associated with this product
+                dimension1_id:
+                  type: number
+                  description: Primary Dimension ID
+                dimension2_id:
+                  type: number
+                  description: Secondary Dimension ID
+                dimension3_id:
+                  type: number
+                  description: Tertiary Dimension ID
+                product_custom_attributes:
+                  type: array
+                  description: Array of product attributes' data
+                  items:
+                    type: object
+                    properties:
+                      product_custom_attribute_id:
+                        type: number
+                      value:
+                        type: string
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                product_category_id:
+                  type: number
+                  description: Product Category ID
+                product_type_id:
+                  type: number
+                  description: Product Type ID
+                has_variants:
+                  type: boolean
+                  description: Whether there are variants associated with this product
+                dimension1_id:
+                  type: number
+                  description: Primary Dimension ID
+                dimension2_id:
+                  type: number
+                  description: Secondary Dimension ID
+                dimension3_id:
+                  type: number
+                  description: Tertiary Dimension ID
+                product_custom_attributes:
+                  type: array
+                  description: Array of product attributes' data
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: Successfully updated Product
+          content:
+            '*/*':
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    example: 1
+                  product_category_id:
+                    type: integer
+                    example: 1
+                  product_type_id:
+                    type: integer
+                    example: 1
+                  has_variants:
+                    type: boolean
+                    example: true
+                  dimension1_id:
+                    type: integer
+                    example: 1
+                  dimension2_id:
+                    type: integer
+                    example: 2
+                  dimension3_id:
+                    type: integer
+                    example: 3
+                  created_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  updated_at:
+                    type: string
+                    format: date-time
+                    example: '2021-08-01T00:00:00.000Z'
+                  user_id:
+                    type: string
+                    example: 123e4567e89b12d3a456
+                  product_custom_attributes:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        value:
+                          type: string
+                          nullable: true
+                        data_type:
+                          type: string
+                        product_custom_attribute_id:
+                          type: integer
+                        product_attribute_group_id:
+                          type: integer
+                          nullable: true
+                        asset_ids:
+                          type: array
+                          items:
+                            type: string
+                    example:
+                    - name: name
+                      value: Product 1
+                      data_type: text
+                      product_custom_attribute_id: 1
+                      product_attribute_group_id: null
+                    - name: sku
+                      value: SKU1
+                      data_type: text
+                      product_custom_attribute_id: 2
+                      product_attribute_group_id: null
+                    - name: Price
+                      value: '10.00'
+                      data_type: text
+                      product_custom_attribute_id: 3
+                      product_attribute_group_id: 1
+                    - name: An Image
+                      value: null
+                      data_type: image
+                      asset_ids:
+                      - abc123
+                      - def234
+                      product_custom_attribute_id: 4
+                      product_attribute_group_id: 2
+                  variants:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                        dimension_options:
+                          type: object
+                          properties:
+                            primary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            secondary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                            tertiary:
+                              type: object
+                              properties:
+                                name:
+                                  type: string
+                                value:
+                                  type: string
+                                dimension_id:
+                                  type: integer
+                                dimension_option_id:
+                                  type: integer
+                              nullable: true
+                        product_custom_attributes:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              name:
+                                type: string
+                              value:
+                                type: string
+                                nullable: true
+                              data_type:
+                                type: string
+                              product_custom_attribute_id:
+                                type: integer
+                              product_attribute_group_id:
+                                type: integer
+                                nullable: true
+                              asset_ids:
+                                type: array
+                                items:
+                                  type: string
+                    example:
+                    - id: 3
+                      dimension_options:
+                        primary:
+                          name: Color
+                          value: Blue
+                          dimension_id: 1
+                          dimension_option_id: 1
+                        secondary:
+                          name: Size
+                          value: Large
+                          dimension_id: 2
+                          dimension_option_id: 2
+                        tertiary: null
+                      product_custom_attributes:
+                      - name: name
+                        value: Product 1 - Blue/Large
+                        data_type: text
+                        product_custom_attribute_id: 1
+                        product_attribute_group_id: null
+                      - name: sku
+                        value: 1-blue-large
+                        data_type: text
+                        product_custom_attribute_id: 2
+                        product_attribute_group_id: null
+                      - name: Price
+                        value: '12.00'
+                        data_type: text
+                        product_custom_attribute_id: 3
+                        product_attribute_group_id: 1
+                  product_assets:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        asset_id:
+                          type: string
+                        product_ids:
+                          type: array
+                          items:
+                            type: integer
+                    example:
+                    - asset_id: e29b41d4a7166655440000
+                      product_ids:
+                      - 1
+                      - 2
+                      - 3
+                      - 4
+                      - 5
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID not found or invalid
+          content: {}
+        '422':
+          description: There was an error updating your Product
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+  /products/{product_id}/assets:
+    post:
+      tags:
+      - products
+      summary: Add Assets to Product
+      description: Add between 1 and 50 assets to a product
+      operationId: post_api_v1_products_product_id_assets
+      parameters:
+      - name: product_id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - asset_ids
+              properties:
+                asset_ids:
+                  type: array
+                  description: Array of Asset ID Strings
+                  minItems: 1
+                  maxItems: 50
+                  items:
+                    type: string
+      responses:
+        '201':
+          description: Successfully added assets to product
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID was not found or invalid
+          content: {}
+        '422':
+          description: At least 1 and no more than 50 Asset IDs are required
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    delete:
+      tags:
+      - products
+      summary: Remove Multiple Assets from Product
+      description: Remove at least 1 and no more than 50 assets from a product
+      operationId: delete_api_v1_products_product_id_assets
+      parameters:
+      - name: product_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: asset_ids
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Comma-separated list of Asset IDs (e.g., ?asset_ids=1,2,3)
+      responses:
+        '204':
+          description: Successfully removed assets from product
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID was not found or invalid
+          content: {}
+        '422':
+          description: At least 1 and no more than 50 Asset IDs are required
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+  /products/{product_id}/assets/{id}:
+    delete:
+      tags:
+      - products
+      summary: Remove Single Asset from a Product
+      description: Remove a single asset from a product
+      operationId: delete_api_v1_products_product_id_assets_id
+      parameters:
+      - name: product_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+        description: Asset ID
+      responses:
+        '204':
+          description: Successfully removed asset from product
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product ID was not found or invalid
+          content: {}
+        '422':
+          description: No matching assets found
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: AccessToken
+x-original-swagger-version: '2.0'

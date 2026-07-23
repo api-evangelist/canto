@@ -1,0 +1,551 @@
+openapi: 3.0.1
+info:
+  title: Canto PIM bulk_products_catalogs product_channel_templates API
+  description: "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n"
+  version: v1.0.1
+servers:
+- url: https://{tenantSubdomain}.{region}/api/v1/pim/
+  variables:
+    tenantSubdomain:
+      default: demo
+    region:
+      enum:
+      - canto.com
+      - canto.global
+      - canto.de
+      - au.canto.com
+      - ca.canto.com
+      default: canto.com
+security:
+- bearerAuth: []
+tags:
+- name: product_channel_templates
+  description: 'Product Channel Templates define the structure and configuration for importing and exporting product data into and out of Canto PIM.
+
+    '
+paths:
+  /product_channel_templates:
+    get:
+      tags:
+      - product_channel_templates
+      summary: Get Product Channel Templates
+      description: '    Retrieve a list of product channel templates with optional filtering
+
+        '
+      operationId: get_api_v1_product_channel_templates
+      parameters:
+      - name: product_channel_id
+        in: query
+        description: Product Channel ID
+        required: false
+        schema:
+          type: string
+      - name: type
+        in: query
+        description: Type of Product Channel. E.g. "import" or "export"
+        required: false
+        schema:
+          type: string
+          enum:
+          - import
+          - export
+      - name: preset_name
+        in: query
+        description: If you only want to fetch preset templates, include this parameter. This parameter will override the type parameter and return only preset templates associated to the preset with the passed name
+        required: false
+        schema:
+          type: string
+          enum:
+          - Shopify
+      responses:
+        '200':
+          description: Successfully fetched Product Channel Templates
+          headers:
+            page-items:
+              description: Number of items per page
+              schema:
+                type: integer
+            link:
+              description: Standard link header defined in RFC 8228. Contains links for first, last, next, and prev pages with respective `rel` attributes
+              schema:
+                type: string
+            current-page:
+              description: Current page number
+              schema:
+                type: integer
+            total-count:
+              description: Total number of items
+              schema:
+                type: integer
+            total-pages:
+              description: Total number of pages
+              schema:
+                type: integer
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/product_channel_templates_response'
+              example:
+                product_channel_templates:
+                - id: 1
+                  name: First Export Template
+                  product_channel_id: 1
+                  file_name_export_format: Product_Image_[name]_[sku]_[attribute_1].jpg
+                  image_export_size: 500px
+                  created_at: '2021-01-01T00:00:00.000Z'
+                  updated_at: '2021-01-01T00:00:00.000Z'
+                - id: 2
+                  name: Import Template
+                  product_channel_id: 2
+                  file_name_export_format: null
+                  image_export_size: null
+                  created_at: '2021-01-01T00:00:00.000Z'
+                  updated_at: '2021-01-01T00:00:00.000Z'
+                - id: 3
+                  name: Shopify Template
+                  product_channel_id: 1
+                  file_name_export_format: null
+                  image_export_size: null
+                  created_at: '2021-01-01T00:00:00.000Z'
+                  updated_at: '2021-01-01T00:00:00.000Z'
+        '400':
+          description: The request was invalid
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    post:
+      tags:
+      - product_channel_templates
+      summary: Create Product Channel Template
+      description: '    Create a new product channel template
+
+        '
+      operationId: post_api_v1_product_channel_templates
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - name
+              - product_channel_id
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Product Channel Template Name
+                product_channel_id:
+                  type: number
+                  description: Product Channel ID
+                custom_attribute_mappings:
+                  type: array
+                  description: Mapping of Channel Template Headers to Product Custom Attributes
+                  items:
+                    $ref: '#/components/schemas/custom_attribute_mapping'
+            example:
+              name: New Template
+              product_channel_id: 10
+              custom_attribute_mappings:
+              - name: Name
+                product_custom_attribute_id: 17
+                required: false
+              - name: SKU
+                product_custom_attribute_id: 18
+                required: true
+              - name: Image
+                product_custom_attribute_id: 49
+                required: false
+              - name: Description
+                product_custom_attribute_id: 25
+                required: false
+        required: true
+      responses:
+        '201':
+          description: Successfully created Product Channel Template
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/product_channel_template'
+              example:
+                id: 8
+                name: New Template
+                product_channel_id: 10
+                file_name_export_format: null
+                image_export_size: null
+                created_at: '2024-12-11T17:45:22.123Z'
+                updated_at: '2024-12-11T17:45:22.123Z'
+                custom_attribute_mappings:
+                - name: Name
+                  product_custom_attribute_id: 17
+                  required: false
+                - name: SKU
+                  product_custom_attribute_id: 18
+                  required: true
+                - name: Image
+                  product_custom_attribute_id: 49
+                  required: false
+                - name: Description
+                  product_custom_attribute_id: 25
+                  required: false
+        '400':
+          description: Invalid request parameters
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '422':
+          description: There was an error creating your Product Channel Template. E.g. invalid custom attribute mapping configuration
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+  /product_channel_templates/{product_channel_template_id}:
+    get:
+      tags:
+      - product_channel_templates
+      summary: Get Product Channel Template
+      description: '    Retrieve a specific product channel template by ID
+
+        '
+      operationId: get_api_v1_product_channel_templates_id
+      parameters:
+      - name: product_channel_template_id
+        in: path
+        description: Product Channel Template ID
+        required: true
+        schema:
+          type: number
+      responses:
+        '200':
+          description: Successfully fetched Product Channel Template
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/product_channel_template'
+              example:
+                id: 7
+                name: Export
+                product_channel_id: 10
+                file_name_export_format: null
+                image_export_size: null
+                created_at: '2024-12-11T14:14:34.189Z'
+                updated_at: '2024-12-11T14:14:34.189Z'
+                custom_attribute_mappings:
+                - name: Name
+                  product_custom_attribute_id: 17
+                  required: true
+                - name: SKU
+                  product_custom_attribute_id: 18
+                  required: true
+                - name: Image
+                  product_custom_attribute_id: 49
+                  required: false
+                - name: Unmapped Attribute
+                  product_custom_attribute_id: null
+                  required: false
+        '400':
+          description: The request was invalid
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product Channel Template not found
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    put:
+      tags:
+      - product_channel_templates
+      summary: Update Product Channel Template
+      description: '    Update an existing product channel template
+
+        '
+      operationId: put_api_v1_product_channel_templates_id
+      parameters:
+      - name: product_channel_template_id
+        in: path
+        description: Product Channel Template ID
+        required: true
+        schema:
+          type: number
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: Product Channel Template Name
+                custom_attribute_mappings:
+                  type: array
+                  description: Mapping of Channel Template Headers to Product Custom Attributes
+                  items:
+                    $ref: '#/components/schemas/custom_attribute_mapping'
+            example:
+              name: Updated Template
+              custom_attribute_mappings:
+              - name: Updated Name
+                product_custom_attribute_id: 17
+                required: true
+              - name: Updated SKU
+                product_custom_attribute_id: 18
+                required: true
+              - name: Updated Image
+                product_custom_attribute_id: 49
+                required: false
+              - name: Updated Description
+                product_custom_attribute_id: 25
+                required: false
+      responses:
+        '200':
+          description: Successfully updated Product Channel Template
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/product_channel_template'
+              example:
+                id: 7
+                name: Updated Template
+                product_channel_id: 10
+                file_name_export_format: Product_[name]_[sku].jpg
+                image_export_size: null
+                created_at: '2024-12-11T14:14:34.189Z'
+                updated_at: '2024-12-11T16:30:15.456Z'
+                custom_attribute_mappings:
+                - name: Updated Name
+                  product_custom_attribute_id: 17
+                  required: true
+                - name: Updated SKU
+                  product_custom_attribute_id: 18
+                  required: true
+                - name: Updated Image
+                  product_custom_attribute_id: 49
+                  required: false
+                - name: Updated Description
+                  product_custom_attribute_id: 25
+                  required: false
+        '400':
+          description: The request was invalid
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product Channel Template not found
+          content: {}
+        '422':
+          description: There was an error updating your Product Channel Template. E.g. invalid custom attribute mapping configuration
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+    delete:
+      tags:
+      - product_channel_templates
+      summary: Destroy Product Channel Template
+      description: '    Delete an existing product channel template
+
+        '
+      operationId: delete_api_v1_product_channel_templates_id
+      parameters:
+      - name: product_channel_template_id
+        in: path
+        description: Product Channel Template ID
+        required: true
+        schema:
+          type: number
+      responses:
+        '204':
+          description: Successfully deleted Product Channel Template
+          content: {}
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product Channel Template ID not found
+          content: {}
+        '422':
+          description: There was an error deleting the Product Channel Template
+          content: {}
+        '500':
+          description: Something went wrong
+          content: {}
+  /product_channel_templates/{product_channel_template_id}/export:
+    post:
+      tags:
+      - product_channel_templates
+      summary: Export Product Channel Template
+      description: '    Export products from a specific product channel template.
+
+        '
+      operationId: post_api_v1_product_channel_templates_product_channel_template_id_export
+      parameters:
+      - name: product_channel_template_id
+        in: path
+        description: Product Channel Template ID
+        required: true
+        schema:
+          type: number
+      responses:
+        '201':
+          description: Your channel tempalte export is being processed.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Your channel template export is being processed. You will receive an email when it is complete
+                additionalProperties: false
+        '401':
+          description: User is not permitted to use the API or Authentication is invalid
+          content: {}
+        '404':
+          description: Product Channel Template ID not found
+          content: {}
+        '422':
+          description: A channel template export is already in the works. Please try again later.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: A channel template export is already in the works. Please try again later.
+                additionalProperties: false
+        '500':
+          description: Something went wrong
+          content: {}
+components:
+  schemas:
+    product_channel_template:
+      required:
+      - id
+      - name
+      - product_channel_id
+      - created_at
+      - updated_at
+      type: object
+      properties:
+        id:
+          type: number
+          description: Product Channel Template ID
+        name:
+          type: string
+          description: Product Channel Template Name
+        product_channel_id:
+          type: number
+          description: Associated Product Channel ID
+        file_name_export_format:
+          type: string
+          nullable: true
+          description: Export file name format template
+        image_export_size:
+          type: string
+          nullable: true
+          description: Export image size
+        created_at:
+          type: string
+          format: date-time
+          description: Product Channel Template creation timestamp
+        updated_at:
+          type: string
+          format: date-time
+          description: Product Channel Template last update timestamp
+        custom_attribute_mappings:
+          type: array
+          description: Array of custom attribute mappings for this template
+          items:
+            $ref: '#/components/schemas/custom_attribute_mapping'
+          example:
+          - name: Name
+            product_custom_attribute_id: 17
+            required: false
+          - name: SKU
+            product_custom_attribute_id: 18
+            required: true
+          - name: Image
+            product_custom_attribute_id: 49
+            required: false
+          - name: Unmapped Attribute
+            product_custom_attribute_id: null
+            required: false
+      additionalProperties: false
+    product_channel_template_summary:
+      required:
+      - id
+      - name
+      - product_channel_id
+      - created_at
+      - updated_at
+      type: object
+      properties:
+        id:
+          type: number
+          description: Product Channel Template ID
+        name:
+          type: string
+          description: Product Channel Template Name
+        product_channel_id:
+          type: number
+          description: Associated Product Channel ID
+        file_name_export_format:
+          type: string
+          nullable: true
+          description: Export file name format template
+        image_export_size:
+          type: string
+          nullable: true
+          description: Export image size
+        created_at:
+          type: string
+          format: date-time
+          description: Product Channel Template creation timestamp
+        updated_at:
+          type: string
+          format: date-time
+          description: Product Channel Template last update timestamp
+      additionalProperties: false
+    custom_attribute_mapping:
+      required:
+      - name
+      - product_custom_attribute_id
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the custom attribute mapping
+        product_custom_attribute_id:
+          type: number
+          nullable: true
+          description: ID of the associated product custom attribute
+        required:
+          type: boolean
+          description: Whether this attribute mapping is required
+      additionalProperties: false
+    product_channel_templates_response:
+      required:
+      - product_channel_templates
+      type: object
+      properties:
+        product_channel_templates:
+          type: array
+          description: Array of Product Channel Templates
+          items:
+            $ref: '#/components/schemas/product_channel_template_summary'
+      additionalProperties: false
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: AccessToken
+x-original-swagger-version: '2.0'

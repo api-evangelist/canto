@@ -1,0 +1,80 @@
+openapi: 3.0.1
+info:
+  title: Canto PIM bulk_products_catalogs filter API
+  description: "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n"
+  version: v1.0.1
+servers:
+- url: https://{tenantSubdomain}.{region}/api/v1/pim/
+  variables:
+    tenantSubdomain:
+      default: demo
+    region:
+      enum:
+      - canto.com
+      - canto.global
+      - canto.de
+      - au.canto.com
+      - ca.canto.com
+      default: canto.com
+security:
+- bearerAuth: []
+tags:
+- name: filter
+  description: "            API endpoints for filtering product attributes.\n            Allows filtering and retrieving product attributes based on various criteria including:\n            - Exact value matches\n            - Partial text matches\n            - Multiple value matches\n            - Negative matches\n            - Product type filtering\n            - Product channel template filtering\n"
+paths:
+  /product_attributes/filter:
+    post:
+      tags:
+      - filter
+      summary: Filtering product attributes
+      description: '    Apply filters to queries based on select Product Attributes
+
+        '
+      operationId: post_api_v1_product_attributes_filter
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filter[product_type_ids]:
+                  type: array
+                  description: Filter by product type IDs
+                  items:
+                    type: string
+                filter[product_channel_template_ids]:
+                  type: array
+                  description: Filter by product channel template IDs
+                  items:
+                    type: string
+                filter[has_variants]:
+                  type: boolean
+                  description: Filter products by variant status
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                filter[product_type_ids]:
+                  type: array
+                  description: Filter by product type IDs
+                  items:
+                    type: string
+                filter[product_channel_template_ids]:
+                  type: array
+                  description: Filter by product channel template IDs
+                  items:
+                    type: string
+                filter[has_variants]:
+                  type: boolean
+                  description: Filter products by variant status
+      responses:
+        '200':
+          description: ok
+          content: {}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: AccessToken
+x-original-swagger-version: '2.0'
