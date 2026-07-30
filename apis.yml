@@ -1,7 +1,20 @@
 aid: canto
 name: Canto
 description: Canto is a digital asset management (DAM) platform offering a fully documented REST API for organizing, tagging, distributing, and sharing brand assets including images, videos, and documents across teams and channels. The API uses OAuth 2.0 for authentication and provides endpoints for asset search, metadata management, folder and album operations, automated workflows, and asset distribution.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/canto.png
 url: https://raw.githubusercontent.com/api-evangelist/canto/refs/heads/main/apis.yml
 created: '2026-06-13'
 modified: '2026-06-13'
@@ -16,25 +29,279 @@ tags:
   - Media Library
   - Asset Distribution
 apis:
-  - name: Canto REST API
-    description: The Canto REST API enables developers to connect Canto media libraries with other applications. It supports asset search, metadata management, folder and album operations, automated workflows, and asset distribution. Authentication uses OAuth 2.0 with support for both authorization code and client credentials grant types.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://www.canto.com/api/
-    baseURL: https://api.canto.com/
-    tags:
-      - Digital Asset Management
-      - Asset Search
-      - Metadata
-      - Folders
-      - Albums
-      - OAuth 2.0
-    properties:
-      - type: Documentation
-        url: https://www.canto.com/api/
-      - type: OpenAPI
-        url: https://canto1.portal.swaggerhub.com/
-      - type: OpenAPI
-        url: openapi/canto-pim-openapi.json
+- aid: canto:canto-bulk-products-catalogs-api
+  name: Canto bulk_products_catalogs API
+  description: "Perform bulk products operation on a Product Catalog\n  \nThese endpoints allow you to\
+    \ add or remove products  that are associated with a specific product catalog in bulk."
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - bulk_products_catalogs
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-bulk-products-catalogs-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-bulk-products-channel-templates-api
+  name: Canto bulk_products_channel_templates API
+  description: "Perform bulk products operation on a Product Channel Template\n  \nThese endpoints allow\
+    \ you to add or remove products  that are associated with a specific channel template in bulk."
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - bulk_products_channel_templates
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-bulk-products-channel-templates-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-dimensions-api
+  name: Canto dimensions API
+  description: The dimensions API from Canto — 2 operation(s) for dimensions.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - dimensions
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-dimensions-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-filter-api
+  name: Canto filter API
+  description: >-
+    API endpoints for filtering product attributes.
+                Allows filtering and retrieving product attributes based on various criteria including:
+                - Exact value matches
+                - Partial text matches
+                - Multiple value matches
+                - Negative matches
+                - Product type filtering
+                - Product channel template filtering
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - filter
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-filter-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-import-settings-api
+  name: Canto import_settings API
+  description: >-
+    API endpoints for configuring how CSV imports should be processed.
+            This includes:
+            - Mapping CSV headers to product attributes
+            - Configuring how product variations should be handled
+            - Setting up category and type assignments
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - import_settings
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-import-settings-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-imports-api
+  name: Canto imports API
+  description: >-
+    API endpoint for importing products from a CSV file.
+              Supports multipart form data uploads with import configuration.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - imports
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-imports-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-options-api
+  name: Canto options API
+  description: The options API from Canto — 2 operation(s) for options.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - options
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-options-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-catalog-products-api
+  name: Canto product_catalog_products API
+  description: >-
+    The product_catalog_products API from Canto — 2 operation(s) for product_catalog_products.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_catalog_products
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-catalog-products-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-catalogs-api
+  name: Canto product_catalogs API
+  description: The product_catalogs API from Canto — 2 operation(s) for product_catalogs.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_catalogs
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-catalogs-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-categories-api
+  name: Canto product_categories API
+  description: The product_categories API from Canto — 2 operation(s) for product_categories.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_categories
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-categories-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-channel-template-products-api
+  name: Canto product_channel_template_products API
+  description: Manage products associated with product channel templates.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_channel_template_products
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-channel-template-products-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-channel-templates-api
+  name: Canto product_channel_templates API
+  description: >-
+    Product Channel Templates define the structure and configuration for importing and exporting product
+    data into and out of Canto PIM.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_channel_templates
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-channel-templates-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-custom-attributes-api
+  name: Canto product_custom_attributes API
+  description: >-
+    The product_custom_attributes API from Canto — 2 operation(s) for product_custom_attributes.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_custom_attributes
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-custom-attributes-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-share-links-api
+  name: Canto product_share_links API
+  description: >-
+    Product Share Links allow you to create shareable links for products that can be accessed
+
+    outside the PIM system. These links can have custom names and optionally expire.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_share_links
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-share-links-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-product-types-api
+  name: Canto product_types API
+  description: The product_types API from Canto — 2 operation(s) for product_types.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - product_types
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-product-types-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-products-api
+  name: Canto products API
+  description: The products API from Canto — 4 operation(s) for products.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - products
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-products-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-variants-api
+  name: Canto variants API
+  description: The variants API from Canto — 4 operation(s) for variants.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - variants
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-variants-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-webhook-events-api
+  name: Canto webhook_events API
+  description: The webhook_events API from Canto — 2 operation(s) for webhook_events.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - webhook_events
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-webhook-events-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
+- aid: canto:canto-webhooks-api
+  name: Canto webhooks API
+  description: >-
+    Webhooks are used to notify your application when certain events occur within the system.
+
+    They can be configured to send a POST request to a specified URL when a specific event happens.
+
+    Available resources and the events they support:
+
+    - product
+      - created
+      - updated
+      - deleted
+    - variant
+      - created
+      - updated
+      - deleted
+    - import
+      - started
+      - completed
+      - failed
+
+    You can validate the payload using the +X-Webhook-Signature+ header. It's a SHA256 hash of the payload,
+    signed with the secret key.
+  humanURL: https://www.canto.com/api/
+  baseURL: https://api.canto.com/
+  tags:
+  - webhooks
+  properties:
+  - type: OpenAPI
+    url: openapi/canto-webhooks-api-openapi.yml
+  - type: Documentation
+    url: https://www.canto.com/api/
 common:
   - type: AgenticAccess
     url: agentic-access/canto-agentic-access.yml
