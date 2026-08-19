@@ -1,0 +1,53 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_categories API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_categories",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Categories",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_categories"
+          },
+          "docs": "    List all available product categories\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Category",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_categories/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Get details for a specific product category\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

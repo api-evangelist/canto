@@ -1,0 +1,150 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_channel_templates API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_channel_templates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Channel Templates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates",
+            "params": [
+              {
+                "name": "product_channel_id",
+                "value": "",
+                "type": "query",
+                "description": "Product Channel ID"
+              },
+              {
+                "name": "type",
+                "value": "",
+                "type": "query",
+                "description": "Type of Product Channel. E.g. \"import\" or \"export\""
+              },
+              {
+                "name": "preset_name",
+                "value": "",
+                "type": "query",
+                "description": "If you only want to fetch preset templates, include this parameter. This parameter will override the type parameter and return only preset templates associated to the preset with the passed name"
+              }
+            ]
+          },
+          "docs": "    Retrieve a list of product channel templates with optional filtering\n"
+        },
+        {
+          "info": {
+            "name": "Create Product Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Create a new product channel template\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              }
+            ]
+          },
+          "docs": "    Retrieve a specific product channel template by ID\n"
+        },
+        {
+          "info": {
+            "name": "Update Product Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update an existing product channel template\n"
+        },
+        {
+          "info": {
+            "name": "Destroy Product Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              }
+            ]
+          },
+          "docs": "    Delete an existing product channel template\n"
+        },
+        {
+          "info": {
+            "name": "Export Product Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id/export",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              }
+            ]
+          },
+          "docs": "    Export products from a specific product channel template.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

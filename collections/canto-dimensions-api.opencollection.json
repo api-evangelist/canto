@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs dimensions API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "dimensions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Dimensions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions"
+          },
+          "docs": "    Retrieve a list of all dimensions\n"
+        },
+        {
+          "info": {
+            "name": "Create Dimension",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Create a new product dimension\n"
+        },
+        {
+          "info": {
+            "name": "Get Dimension",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Fetch a specific dimension by ID\n"
+        },
+        {
+          "info": {
+            "name": "Update Dimension",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update an existing dimension\n"
+        },
+        {
+          "info": {
+            "name": "Update Dimension",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update specific fields of an existing dimension\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

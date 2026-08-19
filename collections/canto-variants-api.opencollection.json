@@ -1,0 +1,249 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs variants API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "variants",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Variants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    List all product variants\n"
+        },
+        {
+          "info": {
+            "name": "Create Product Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Create a new product variant\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:id",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Fetch details of a specific variant\n"
+        },
+        {
+          "info": {
+            "name": "Update Product Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:id",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update a product variant\n"
+        },
+        {
+          "info": {
+            "name": "Update Product Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:id",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update a product variant\n"
+        },
+        {
+          "info": {
+            "name": "Delete Product Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:id",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Remove a product variant\n"
+        },
+        {
+          "info": {
+            "name": "Add Assets to Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:variant_id/assets",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variant_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add between 1 and 50 assets to a variant"
+        },
+        {
+          "info": {
+            "name": "Remove Multiple Assets from Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:variant_id/assets",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variant_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "asset_ids",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of Asset IDs (e.g., ?asset_ids=1,2,3)"
+              }
+            ]
+          },
+          "docs": "Remove at least 1 and no more than 50 assets from a variant"
+        },
+        {
+          "info": {
+            "name": "Remove Single Asset from a Variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/variants/:variant_id/assets/:id",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "variant_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Asset ID"
+              }
+            ]
+          },
+          "docs": "Remove a single asset from a variant"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

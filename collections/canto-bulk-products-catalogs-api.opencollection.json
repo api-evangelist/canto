@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "bulk_products_catalogs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Perform bulk products operation on a Product Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/bulk/products/product_catalogs",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Perform bulk products operation on a Product Catalog\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

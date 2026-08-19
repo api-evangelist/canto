@@ -1,0 +1,112 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_types API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_types"
+          },
+          "docs": "    Retrieve all available product Types\n"
+        },
+        {
+          "info": {
+            "name": "Create Type",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_types",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Create a new Product Type\n"
+        },
+        {
+          "info": {
+            "name": "Get Type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Get details about a specific product Type\n"
+        },
+        {
+          "info": {
+            "name": "Update Type",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Fully update a product Type\n"
+        },
+        {
+          "info": {
+            "name": "Update Type",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Patch a product Type\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

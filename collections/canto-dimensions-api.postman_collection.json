@@ -1,0 +1,2220 @@
+{
+  "item": [
+    {
+      "id": "0a0f966e-93c7-4b91-a726-624e63e1e5ef",
+      "name": "dimensions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a8a2883d-fe1b-46dd-b270-4bfee02c2b7e",
+          "name": "Get Dimensions",
+          "request": {
+            "name": "Get Dimensions",
+            "description": {
+              "content": "    Retrieve a list of all dimensions\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dimensions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1d24ba28-c6ce-440d-8747-67d652c90824",
+              "name": "Successfully fetched Dimensions",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "Number of items per page",
+                  "key": "page-items",
+                  "value": "9052"
+                },
+                {
+                  "disabled": false,
+                  "description": "Standard link header defined in RFC 8228. Contains links for first, last, next, and prev pages with respective `rel` attributes",
+                  "key": "link",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Current page number",
+                  "key": "current-page",
+                  "value": "9052"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of items",
+                  "key": "total-count",
+                  "value": "9052"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of pages",
+                  "key": "total-pages",
+                  "value": "9052"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimensions\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fcb9e3e3-ca28-4c13-9fd8-7a8cba3e4db0",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5d847ff2-e085-4e71-83ef-8a60d74df0da",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "87341f1b-e9e4-4e69-8a2c-1385a3345839",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b5b7415c-0bef-4ccd-b742-cd023bf0d67d",
+          "name": "Create Dimension",
+          "request": {
+            "name": "Create Dimension",
+            "description": {
+              "content": "    Create a new product dimension\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dimensions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) Dimension Name"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "2647d06c-994f-4213-8e32-53219ef6ee2b",
+              "name": "Successfully created Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": [\n    \"string\",\n    \"string\"\n  ],\n  \"id\": 6634.78367407246,\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "993a9be6-2fcc-4aa9-9e91-17a0cde38d16",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7d52df22-fbed-4fc2-80fd-e4e0e66bbc6a",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "71bbc986-f3ef-4885-8830-27ff4e68191f",
+              "name": "There was an error creating your Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "b8325e4f-e175-4953-ba83-b1304b4b11c2",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4085778c-9755-4cb2-a992-5e60ff534767",
+          "name": "Get Dimension",
+          "request": {
+            "name": "Get Dimension",
+            "description": {
+              "content": "    Fetch a specific dimension by ID\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dimensions",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "796a64dc-78f0-43c1-967f-f3f00cf34613",
+              "name": "Successfully fetched Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": [\n    \"string\",\n    \"string\"\n  ],\n  \"id\": 2136.2147666798182,\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3bff66ac-cbbd-4d64-afca-544660b6456f",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "62395d6e-94cc-4746-8e76-f358e45f59fa",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5877983b-dedc-4809-beba-df604411d577",
+              "name": "Dimension ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a9f98e2a-bdfc-40b4-8597-6715ea4aa069",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "31c68529-5afe-4706-8164-ffbdb56ab8b6",
+          "name": "Update Dimension",
+          "request": {
+            "name": "Update Dimension",
+            "description": {
+              "content": "    Update an existing dimension\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dimensions",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Dimension Name"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "3a7350f2-89f8-4573-95c5-f380a953d3cc",
+              "name": "Successfully updated Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": [\n    \"string\",\n    \"string\"\n  ],\n  \"id\": 2136.2147666798182,\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "15cb923e-37ac-4c2f-abdf-c2419ed59c5f",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a9fb8492-4341-4784-8dd7-3d3455604216",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1c2cb133-8e3f-478c-8920-6005fd4741f2",
+              "name": "Dimension ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e7b76d43-5756-4b9d-81f0-1b75405d5ac5",
+              "name": "There was an error updating your Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9c52c2fc-bb72-41eb-8c22-1dac25512699",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0cd3392e-5448-46b2-a75f-0885aec6fdde",
+          "name": "Update Dimension",
+          "request": {
+            "name": "Update Dimension",
+            "description": {
+              "content": "    Update specific fields of an existing dimension\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dimensions",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Dimension Name"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "92d3cdd6-ec33-49d9-94c0-80e98b423f4b",
+              "name": "Successfully updated Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": [\n    \"string\",\n    \"string\"\n  ],\n  \"id\": 2136.2147666798182,\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e88bccc6-ad7d-454d-b22f-32061b0887d3",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cb412499-9f67-46db-bc95-1b64041443ed",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2cba1f99-8afb-4c99-b720-90e0830cda01",
+              "name": "Dimension ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "24ba5809-a1d8-4f7d-9dc0-5dca8878df54",
+              "name": "There was an error updating your Dimension",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "98b452e9-7933-4c30-9aee-bede0359ddb2",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dimensions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Dimension Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "demo",
+      "key": "tenantSubdomain"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "canto.com",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantSubdomain}}.{{region}}/api/v1/pim/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "6e3556e2-8476-436d-bfe2-9f3b05dda01e",
+    "name": "Canto PIM bulk_products_catalogs dimensions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n",
+      "type": "text/plain"
+    }
+  }
+}

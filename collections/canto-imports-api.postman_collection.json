@@ -1,0 +1,523 @@
+{
+  "item": [
+    {
+      "id": "acb078a5-f381-4fad-8941-aa7ce7eac5b9",
+      "name": "imports",
+      "description": {
+        "content": "          API endpoint for importing products from a CSV file.\n          Supports multipart form data uploads with import configuration.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "138729c9-ba9c-49e8-bad9-00c21ffeea5e",
+          "name": "Import products from CSV",
+          "request": {
+            "name": "Import products from CSV",
+            "description": {
+              "content": "        Creates a new product import job from a CSV file.\n\n        The CSV file should be uploaded as multipart form data along with\n        the channel template and channel format IDs for processing the import.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "imports"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "channel_format_id",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) Channel format ID that contains the variation format settings"
+                },
+                {
+                  "key": "channel_template_id",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) Channel template ID that contains the custom attribute mappings"
+                },
+                {
+                  "key": "file",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) The CSV file to import (multipart form data)"
+                },
+                {
+                  "key": "product_type_id",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Product type ID to assign to imported products"
+                },
+                {
+                  "key": "product_category_id",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Product category ID to assign to imported products"
+                },
+                {
+                  "key": "product_category_header",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Product category header in CSV to use to dynamically assign the product category (max 255 chars)"
+                },
+                {
+                  "key": "product_category_id_header",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Product category ID header in CSV to use to dynamically assign the product category (max 255 chars)"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "a673280d-962c-40c7-894c-041e455edc0c",
+              "name": "Missing required parameters or invalid file format",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "imports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Channel format ID that contains the variation format settings",
+                        "type": "text/plain"
+                      },
+                      "key": "channel_format_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) Channel template ID that contains the custom attribute mappings",
+                        "type": "text/plain"
+                      },
+                      "key": "channel_template_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The CSV file to import (multipart form data)",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product type ID to assign to imported products",
+                        "type": "text/plain"
+                      },
+                      "key": "product_type_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category ID to assign to imported products",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category header in CSV to use to dynamically assign the product category (max 255 chars)",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_header",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category ID header in CSV to use to dynamically assign the product category (max 255 chars)",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_id_header",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d7b17414-52a7-4f56-a643-a547add7536f",
+              "name": "Template or format not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "imports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Channel format ID that contains the variation format settings",
+                        "type": "text/plain"
+                      },
+                      "key": "channel_format_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) Channel template ID that contains the custom attribute mappings",
+                        "type": "text/plain"
+                      },
+                      "key": "channel_template_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The CSV file to import (multipart form data)",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product type ID to assign to imported products",
+                        "type": "text/plain"
+                      },
+                      "key": "product_type_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category ID to assign to imported products",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category header in CSV to use to dynamically assign the product category (max 255 chars)",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_header",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category ID header in CSV to use to dynamically assign the product category (max 255 chars)",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_id_header",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a64aa557-f8bd-44a1-a2a5-33873a70ec56",
+              "name": "Invalid import configuration",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "imports"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Channel format ID that contains the variation format settings",
+                        "type": "text/plain"
+                      },
+                      "key": "channel_format_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) Channel template ID that contains the custom attribute mappings",
+                        "type": "text/plain"
+                      },
+                      "key": "channel_template_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "(Required) The CSV file to import (multipart form data)",
+                        "type": "text/plain"
+                      },
+                      "key": "file",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product type ID to assign to imported products",
+                        "type": "text/plain"
+                      },
+                      "key": "product_type_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category ID to assign to imported products",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_id",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category header in CSV to use to dynamically assign the product category (max 255 chars)",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_header",
+                      "value": "<string>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Product category ID header in CSV to use to dynamically assign the product category (max 255 chars)",
+                        "type": "text/plain"
+                      },
+                      "key": "product_category_id_header",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "demo",
+      "key": "tenantSubdomain"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "canto.com",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantSubdomain}}.{{region}}/api/v1/pim/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "38c7dd78-8a8a-4c77-a9ff-72183b0b507d",
+    "name": "Canto PIM bulk_products_catalogs imports API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n",
+      "type": "text/plain"
+    }
+  }
+}

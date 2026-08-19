@@ -1,0 +1,134 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs webhooks API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks"
+          },
+          "docs": "    List all registered webhooks\n"
+        },
+        {
+          "info": {
+            "name": "Create Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Register a new webhook\n"
+        },
+        {
+          "info": {
+            "name": "Get Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Webhook ID"
+              }
+            ]
+          },
+          "docs": "    Get details of a specific webhook\n"
+        },
+        {
+          "info": {
+            "name": "Update Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Webhook ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Fully update a webhook\n"
+        },
+        {
+          "info": {
+            "name": "Update Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Webhook ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Partially update webhook details\n"
+        },
+        {
+          "info": {
+            "name": "Delete Webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Webhook ID"
+              }
+            ]
+          },
+          "docs": "    Remove a webhook\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

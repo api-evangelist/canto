@@ -1,0 +1,2220 @@
+{
+  "item": [
+    {
+      "id": "9bd5cbf9-949c-4910-bee4-cf9cd7ed896d",
+      "name": "product_types",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "236cc9a0-8e9e-4347-b1a6-1cf853185b75",
+          "name": "Get Types",
+          "request": {
+            "name": "Get Types",
+            "description": {
+              "content": "    Retrieve all available product Types\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a22b4c3-1d99-45a3-bfa4-eb1e28ddbf84",
+              "name": "Successfully fetched Types",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "Number of items per page",
+                  "key": "page-items",
+                  "value": "7462"
+                },
+                {
+                  "disabled": false,
+                  "description": "Standard link header defined in RFC 8228. Contains links for first, last, next, and prev pages with respective `rel` attributes",
+                  "key": "link",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Current page number",
+                  "key": "current-page",
+                  "value": "7462"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of items",
+                  "key": "total-count",
+                  "value": "7462"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of pages",
+                  "key": "total-pages",
+                  "value": "7462"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"product_types\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44991bc9-c073-4140-b774-249dfd5c2cd6",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2cd03dd8-e6f6-4145-92e5-65f7f856b57f",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7956bb62-d069-427d-99e7-bb05c32fb949",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2199f27d-425b-422d-8d6c-c1275f6508e4",
+          "name": "Create Type",
+          "request": {
+            "name": "Create Type",
+            "description": {
+              "content": "    Create a new Product Type\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_types"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "(Required) Product Type Name"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "cde1a080-4dde-490f-a1d8-00907d788409",
+              "name": "Successfully created Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": 4574.1619297471425,\n  \"name\": \"string\",\n  \"product_custom_attributes\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "26c9c8bd-a3f2-43dc-82e6-6cea1a556a31",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "aaf4f788-baa3-43fc-a463-5ac73366b9e3",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "33930788-ba93-486c-8c50-4b2f07784964",
+              "name": "There was an error creating your Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "06f55624-f77c-4cd4-a47e-bd35dfb725c4",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d48a400e-f3f1-43e8-882d-69398c5d0e6c",
+          "name": "Get Type",
+          "request": {
+            "name": "Get Type",
+            "description": {
+              "content": "    Get details about a specific product Type\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_types",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a50497c2-2bd7-420b-afe0-2d8885b60d9c",
+              "name": "Successfully fetched Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": 539.8609493346207,\n  \"product_custom_attributes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "011489bb-cd39-4a05-b9a9-bf0cb590317f",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d5db922b-829b-4b85-baf1-c3e8d509df51",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1ff2b22c-f8b0-4a5f-805f-fe73814756d8",
+              "name": "Product Type ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "58fa1532-b0e2-4de4-b409-4d9418878210",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97d8afe2-113d-4554-af02-d99fbd2d547b",
+          "name": "Update Type",
+          "request": {
+            "name": "Update Type",
+            "description": {
+              "content": "    Fully update a product Type\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_types",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Product Type Name"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e60130e2-9d0d-412a-ab8c-c73e9b2aab30",
+              "name": "Successfully updated Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": 539.8609493346207,\n  \"product_custom_attributes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "67824f32-34ce-461f-9ca1-1ac73e9761bd",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "56d6ae00-5f1b-474a-abca-e08bddee2803",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3b4763f1-4485-4e8c-8701-5772c4ae9e91",
+              "name": "Product Type ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d94c0772-c563-4a62-a1e9-9a5ca22e8ea7",
+              "name": "There was an error updating your Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "95a18f8f-45f5-4d2e-8c49-5f687c635917",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1dc34ac9-7116-4ce5-9312-18d5b3e54069",
+          "name": "Update Type",
+          "request": {
+            "name": "Update Type",
+            "description": {
+              "content": "    Patch a product Type\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_types",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "<string>",
+                  "type": "text",
+                  "description": "Product Type Name"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1061dbd4-deae-4624-84c6-57911f929bdf",
+              "name": "Successfully updated Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": 539.8609493346207,\n  \"product_custom_attributes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"name\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "94c43eb9-4f8b-4231-a241-616cd39b0e89",
+              "name": "The request was invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "981b138f-87de-497e-9038-5efb2b72e1eb",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d9be87e6-48a3-4b03-a65c-0ca3ef379c44",
+              "name": "Product Type ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "38f3f53b-cb6d-4ce5-b3c0-5cf0926a9902",
+              "name": "There was an error updating your Type",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5f86f7a0-5aea-422e-a29d-7733b6a0263a",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_types",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "Product Type Name",
+                        "type": "text/plain"
+                      },
+                      "key": "name",
+                      "value": "<string>",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "demo",
+      "key": "tenantSubdomain"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "canto.com",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantSubdomain}}.{{region}}/api/v1/pim/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "132e2282-cce9-44cf-bc18-3a37c2058f0c",
+    "name": "Canto PIM bulk_products_catalogs product_types API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n",
+      "type": "text/plain"
+    }
+  }
+}

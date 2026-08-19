@@ -1,0 +1,120 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_custom_attributes API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_custom_attributes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Custom Attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_custom_attributes",
+            "params": [
+              {
+                "name": "data_type",
+                "value": "",
+                "type": "query",
+                "description": "If set, only product custom attributes with the passed value for `data_type` will be returned"
+              }
+            ]
+          },
+          "docs": "    Retrieve all custom attributes defined in the Product Hub\n"
+        },
+        {
+          "info": {
+            "name": "Create Product Custom Attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_custom_attributes",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Create a new custom attribute\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Custom Attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_custom_attributes/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Get a specific custom attribute by ID.\n"
+        },
+        {
+          "info": {
+            "name": "Update Product Custom Attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_custom_attributes/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update a custom attribute\n"
+        },
+        {
+          "info": {
+            "name": "Update Product Custom Attribute",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_custom_attributes/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update a custom attribute\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

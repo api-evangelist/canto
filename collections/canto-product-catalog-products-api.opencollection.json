@@ -1,0 +1,117 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_catalog_products API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_catalog_products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Catalog Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_catalogs/:product_catalog_id/products",
+            "params": [
+              {
+                "name": "product_catalog_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Retrieve all products within a specific catalog\n"
+        },
+        {
+          "info": {
+            "name": "Add Product to Product Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_catalogs/:product_catalog_id/products",
+            "params": [
+              {
+                "name": "product_catalog_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Add a single product to a specific catalog\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Catalog Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_catalogs/:product_catalog_id/products/:id",
+            "params": [
+              {
+                "name": "product_catalog_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "include_share_link",
+                "value": "",
+                "type": "query",
+                "description": "Include Share Link URL in response TODO: still defining"
+              }
+            ]
+          },
+          "docs": "    Get a specific product from a catalog by ID\n"
+        },
+        {
+          "info": {
+            "name": "Remove Product from Product Catalog",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_catalogs/:product_catalog_id/products/:id",
+            "params": [
+              {
+                "name": "product_catalog_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Product ID"
+              }
+            ]
+          },
+          "docs": "    Remove a specific product from a catalog by ID\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

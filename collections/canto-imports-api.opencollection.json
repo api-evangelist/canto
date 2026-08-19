@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs imports API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "imports",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Import products from CSV",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/imports",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "        Creates a new product import job from a CSV file.\n\n        The CSV file should be uploaded as multipart form data along with\n        the channel template and channel format IDs for processing the import.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

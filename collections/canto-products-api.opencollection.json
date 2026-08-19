@@ -1,0 +1,200 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs products API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products"
+          },
+          "docs": "    List all products in the catalog\n"
+        },
+        {
+          "info": {
+            "name": "Create Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Add a new product\n"
+        },
+        {
+          "info": {
+            "name": "Get Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Retrieve details for a specific product by ID\n"
+        },
+        {
+          "info": {
+            "name": "Update Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update a product\n"
+        },
+        {
+          "info": {
+            "name": "Update Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update a product\n"
+        },
+        {
+          "info": {
+            "name": "Delete Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Delete a product from the catalog\n"
+        },
+        {
+          "info": {
+            "name": "Add Assets to Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/assets",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Add between 1 and 50 assets to a product"
+        },
+        {
+          "info": {
+            "name": "Remove Multiple Assets from Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/assets",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "asset_ids",
+                "value": "",
+                "type": "query",
+                "description": "Comma-separated list of Asset IDs (e.g., ?asset_ids=1,2,3)"
+              }
+            ]
+          },
+          "docs": "Remove at least 1 and no more than 50 assets from a product"
+        },
+        {
+          "info": {
+            "name": "Remove Single Asset from a Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/products/:product_id/assets/:id",
+            "params": [
+              {
+                "name": "product_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Asset ID"
+              }
+            ]
+          },
+          "docs": "Remove a single asset from a product"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

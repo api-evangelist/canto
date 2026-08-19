@@ -1,0 +1,4880 @@
+{
+  "item": [
+    {
+      "id": "6a9e508a-99a4-4828-9826-5dfd3423a167",
+      "name": "variants",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a8f8fd52-5f02-4d70-9d46-17594276889b",
+          "name": "Get Product Variants",
+          "request": {
+            "name": "Get Product Variants",
+            "description": {
+              "content": "    List all product variants\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9e7474ec-72cc-4f79-a237-4dafcfa4a087",
+              "name": "Successfully fetched Product Variants",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "Number of items per page",
+                  "key": "page-items",
+                  "value": "2937"
+                },
+                {
+                  "disabled": false,
+                  "description": "Standard link header defined in RFC 8228. Contains links for first, last, next, and prev pages with respective `rel` attributes",
+                  "key": "link",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Current page number",
+                  "key": "current-page",
+                  "value": "2937"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of items",
+                  "key": "total-count",
+                  "value": "2937"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of pages",
+                  "key": "total-pages",
+                  "value": "2937"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"variants\": [\n    {\n      \"id\": 1,\n      \"dimension_options\": {\n        \"primary\": {\n          \"name\": \"Size\",\n          \"value\": \"Small\",\n          \"dimension_id\": 1,\n          \"dimension_option_id\": 1\n        },\n        \"secondary\": {\n          \"name\": \"Color\",\n          \"value\": \"Red\",\n          \"dimension_id\": 2,\n          \"dimension_option_id\": 2\n        },\n        \"tertiary\": null\n      },\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"name\",\n          \"value\": \"Red Small Shirt\",\n          \"data_type\": \"text\",\n          \"product_custom_attribute_id\": 1,\n          \"product_attribute_group_id\": 1\n        },\n        {\n          \"name\": \"sku\",\n          \"value\": \"RS-S\",\n          \"data_type\": \"text\",\n          \"product_custom_attribute_id\": 2,\n          \"product_attribute_group_id\": 1\n        }\n      ]\n    },\n    {\n      \"id\": 2,\n      \"dimension_options\": {\n        \"primary\": {\n          \"name\": \"Size\",\n          \"value\": \"Large\",\n          \"dimension_id\": 1,\n          \"dimension_option_id\": 3\n        },\n        \"secondary\": {\n          \"name\": \"Color\",\n          \"value\": \"Blue\",\n          \"dimension_id\": 2,\n          \"dimension_option_id\": 4\n        },\n        \"tertiary\": null\n      },\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"name\",\n          \"value\": \"Blue Large Shirt\",\n          \"data_type\": \"text\",\n          \"product_custom_attribute_id\": 3,\n          \"product_attribute_group_id\": 1\n        },\n        {\n          \"name\": \"sku\",\n          \"value\": \"BL-L\",\n          \"data_type\": \"text\",\n          \"product_custom_attribute_id\": 4,\n          \"product_attribute_group_id\": 1\n        }\n      ]\n    }\n  ],\n  \"product_assets\": [\n    {\n      \"asset_id\": \"e29b41d4a7166655440000\",\n      \"product_ids\": [\n        1,\n        2\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b68465fd-4f8e-4c26-9a62-2a7bd8cbf5a0",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d16120ec-9fae-4c04-8bda-ae8cd3fb5ec6",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1dbe229d-7fb0-4e87-a3a6-4e671bcccc62",
+          "name": "Create Product Variant",
+          "request": {
+            "name": "Create Product Variant",
+            "description": {
+              "content": "    Create a new product variant\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "dimension_options[primary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "(Required) Primary Dimension Option ID"
+                },
+                {
+                  "key": "dimension_options[primary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Primary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[secondary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[secondary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Secondary Dimension Option ID"
+                },
+                {
+                  "key": "dimension_options[tertiary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[tertiary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Tertiary Dimension Option ID"
+                },
+                {
+                  "key": "product_custom_attributes",
+                  "value": "[\"<string>\",\"<string>\"]",
+                  "type": "text",
+                  "description": "Array of product attributes' data"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ce8d2e1f-5732-4cd6-b882-d1ed4c35fd26",
+              "name": "Successfully created Product Variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[\"<string>\",\"<string>\"]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": {\n    \"primary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 7294,\n      \"dimension_option_id\": 117\n    },\n    \"secondary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 3283,\n      \"dimension_option_id\": 621\n    },\n    \"tertiary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 5783,\n      \"dimension_option_id\": 4290\n    }\n  },\n  \"id\": 1078,\n  \"product_assets\": [\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        4109,\n        3951\n      ]\n    },\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        2946,\n        8509\n      ]\n    }\n  ],\n  \"product_custom_attributes\": [\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2648,\n      \"product_attribute_group_id\": 9363,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2657,\n      \"product_attribute_group_id\": 9474,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e4c44bd6-9604-4e4a-9b6c-d57ad01d57f5",
+              "name": "The request parameters were invalid. References to `nil` means empty string or `null` value",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[\"<string>\",\"<string>\"]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2584b1e4-be2d-47e5-9f8e-15ec22c69d6e",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[\"<string>\",\"<string>\"]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "5021f9c2-dcf5-46dd-9966-18f8fb3b851b",
+              "name": "Product Variant validation failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[\"<string>\",\"<string>\"]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "2c68d7bd-21bb-4595-83f5-00a2d0940cd9",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[\"<string>\",\"<string>\"]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0c1c12b3-8c8c-4344-92fb-e897d42b962e",
+          "name": "Get Product Variant",
+          "request": {
+            "name": "Get Product Variant",
+            "description": {
+              "content": "    Fetch details of a specific variant\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "243249e4-c54b-4790-b6d8-4908d3082a9b",
+              "name": "Successfully fetched Product ",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": {\n    \"primary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 7294,\n      \"dimension_option_id\": 117\n    },\n    \"secondary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 3283,\n      \"dimension_option_id\": 621\n    },\n    \"tertiary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 5783,\n      \"dimension_option_id\": 4290\n    }\n  },\n  \"id\": 1078,\n  \"product_assets\": [\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        4109,\n        3951\n      ]\n    },\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        2946,\n        8509\n      ]\n    }\n  ],\n  \"product_custom_attributes\": [\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2648,\n      \"product_attribute_group_id\": 9363,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2657,\n      \"product_attribute_group_id\": 9474,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f2b547de-aea8-4f93-a168-0f884ffa9fde",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "19711078-5ffd-4cc9-94e8-bf4225c77377",
+              "name": "Product Variant ID not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "db2f5c72-cd4a-46dd-bf30-0c7dbc7267e2",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b0fec8b2-5ad3-4ecb-981e-a231e2e1a166",
+          "name": "Update Product Variant",
+          "request": {
+            "name": "Update Product Variant",
+            "description": {
+              "content": "    Update a product variant\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "dimension_options[primary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "(Required) Primary Dimension Option ID"
+                },
+                {
+                  "key": "dimension_options[primary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Primary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[secondary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[secondary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Secondary Dimension Option ID"
+                },
+                {
+                  "key": "dimension_options[tertiary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[tertiary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Tertiary Dimension Option ID"
+                },
+                {
+                  "key": "product_custom_attributes",
+                  "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                  "type": "text",
+                  "description": "Array of product attributes' data"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d857c018-1a73-444a-a0c4-c70c88995bd1",
+              "name": "Successfully updated Product Variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": {\n    \"primary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 7294,\n      \"dimension_option_id\": 117\n    },\n    \"secondary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 3283,\n      \"dimension_option_id\": 621\n    },\n    \"tertiary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 5783,\n      \"dimension_option_id\": 4290\n    }\n  },\n  \"id\": 1078,\n  \"product_assets\": [\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        4109,\n        3951\n      ]\n    },\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        2946,\n        8509\n      ]\n    }\n  ],\n  \"product_custom_attributes\": [\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2648,\n      \"product_attribute_group_id\": 9363,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2657,\n      \"product_attribute_group_id\": 9474,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2bbfc17d-1e1c-4180-bf95-bd1fc01c3448",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "110615f2-d0e5-4944-a248-3761f20632f4",
+              "name": "Product Variant ID not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bd2ee694-3e24-4840-bbf8-f0ab45c69780",
+              "name": "Product Variant validation failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "9fc51c78-606e-46fa-b43e-5805f67c9659",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0e0279a0-8b9f-40a9-a58e-3c3a207529a4",
+          "name": "Delete Product Variant",
+          "request": {
+            "name": "Delete Product Variant",
+            "description": {
+              "content": "    Remove a product variant\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7492b4d1-bead-4a6c-8f30-e4b513b7f835",
+              "name": "Successfully Deleted Product Variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "ab818f57-8a05-48c1-b642-da0182ccbb6a",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "47db1179-67dd-4b57-b04b-f07501691d0c",
+              "name": "Product Variant ID not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "faabc558-26d5-48d1-bf20-31598bbccfaf",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d23c7c89-fd19-44f8-83f1-1ab5eff8ae85",
+          "name": "Update Product Variant",
+          "request": {
+            "name": "Update Product Variant",
+            "description": {
+              "content": "    Update a product variant\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "dimension_options[primary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "(Required) Primary Dimension Option ID"
+                },
+                {
+                  "key": "dimension_options[primary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Primary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[secondary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[secondary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Secondary Dimension Option ID"
+                },
+                {
+                  "key": "dimension_options[tertiary][dimension_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)"
+                },
+                {
+                  "key": "dimension_options[tertiary][dimension_option_id]",
+                  "value": "<number>",
+                  "type": "text",
+                  "description": "Tertiary Dimension Option ID"
+                },
+                {
+                  "key": "product_custom_attributes",
+                  "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                  "type": "text",
+                  "description": "Array of product attributes' data"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "31daf26e-de5d-46ac-b23a-e10d811c9297",
+              "name": "Successfully updated Product Variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"dimension_options\": {\n    \"primary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 7294,\n      \"dimension_option_id\": 117\n    },\n    \"secondary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 3283,\n      \"dimension_option_id\": 621\n    },\n    \"tertiary\": {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"dimension_id\": 5783,\n      \"dimension_option_id\": 4290\n    }\n  },\n  \"id\": 1078,\n  \"product_assets\": [\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        4109,\n        3951\n      ]\n    },\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        2946,\n        8509\n      ]\n    }\n  ],\n  \"product_custom_attributes\": [\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2648,\n      \"product_attribute_group_id\": 9363,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 2657,\n      \"product_attribute_group_id\": 9474,\n      \"asset_ids\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8a524474-9f9f-445e-b862-69a922fc708c",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "bfe70bb1-bf6b-457d-ae90-baf533c9b81c",
+              "name": "Product Variant ID not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "7281b4d5-8aaf-4d11-ba38-dac378a832fb",
+              "name": "Product Variant validation failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "aee3f11e-1880-49e4-82bc-7a4ed6c85c54",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "description": {
+                        "content": "(Required) Primary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Primary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[primary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Secondary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[secondary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension ID (optional, will be inferred from dimension_option_id)",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Tertiary Dimension Option ID",
+                        "type": "text/plain"
+                      },
+                      "key": "dimension_options[tertiary][dimension_option_id]",
+                      "value": "<number>",
+                      "type": "text"
+                    },
+                    {
+                      "description": {
+                        "content": "Array of product attributes' data",
+                        "type": "text/plain"
+                      },
+                      "key": "product_custom_attributes",
+                      "value": "[{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"},{\"product_custom_attribute_id\":\"<number>\",\"value\":\"<string>\",\"data_type\":\"<string>\"}]",
+                      "type": "text"
+                    }
+                  ]
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "95244539-2b57-432d-b60e-ea6033ee5666",
+          "name": "Add Assets to Variant",
+          "request": {
+            "name": "Add Assets to Variant",
+            "description": {
+              "content": "Add between 1 and 50 assets to a variant",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":variant_id",
+                "assets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "variant_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"asset_ids\": [\n    \"<string>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "150c5d97-e4e9-448d-97bd-f23f101041f1",
+              "name": "Successfully added assets to  variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"asset_ids\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "24bc44c2-fc72-408a-ae99-d2ec6f0713fc",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"asset_ids\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "c245a60a-1e64-4698-be10-a91cf08c99db",
+              "name": "Product ID or Variant ID was not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"asset_ids\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "1068dd5d-0678-46e7-8e6b-1dcc74202c79",
+              "name": "At least 1 and no more than 50 Asset IDs are required",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"asset_ids\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "14d89778-af0e-4742-8f51-549ff0e5521e",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"asset_ids\": [\n    \"<string>\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c444800c-e686-4b10-8af3-d3b673b0be7b",
+          "name": "Remove Multiple Assets from Variant",
+          "request": {
+            "name": "Remove Multiple Assets from Variant",
+            "description": {
+              "content": "Remove at least 1 and no more than 50 assets from a variant",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":variant_id",
+                "assets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "asset_ids",
+                  "value": "<string>",
+                  "description": "(Required) Comma-separated list of Asset IDs (e.g., ?asset_ids=1,2,3)"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "variant_id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "553f122f-59e3-4ec7-a3cc-3e792befbab1",
+              "name": "Successfully removed assets from variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset_ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "134c7688-9bd7-4504-8077-deb3d624573f",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset_ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "efe74360-9bfb-456f-9fb0-996e3f8faa1f",
+              "name": "Product ID or Variant ID was not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset_ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0d6fea1d-7498-4050-b5bc-abcd60a3b442",
+              "name": "At least 1 and no more than 50 Asset IDs are required",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset_ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "15c2a097-4e6e-4ab3-a65d-3d61014681f1",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "asset_ids",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4cfe7d99-e7a4-4825-b4a9-af75f811a2b4",
+          "name": "Remove Single Asset from a Variant",
+          "request": {
+            "name": "Remove Single Asset from a Variant",
+            "description": {
+              "content": "Remove a single asset from a variant",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "products",
+                ":product_id",
+                "variants",
+                ":variant_id",
+                "assets",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "product_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "variant_id",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) Asset ID"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6a442e49-ed43-4dbe-afc7-60dbd36f93ac",
+              "name": "Successfully removed asset from variant",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Asset ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "319e55f2-f242-469f-9c8f-50856ce634e5",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Asset ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d52ee31b-d6c7-45b5-884d-58b201a82186",
+              "name": "Product ID was not found or invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Asset ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "00285db1-d492-4fd5-8efb-2455c37e0154",
+              "name": "No matching assets found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Asset ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "af3a8d5a-2661-4222-af44-6ea7622acee9",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "products",
+                    ":product_id",
+                    "variants",
+                    ":variant_id",
+                    "assets",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "product_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "variant_id",
+                      "description": "(Required) "
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) Asset ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "demo",
+      "key": "tenantSubdomain"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "canto.com",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantSubdomain}}.{{region}}/api/v1/pim/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e54056d4-fb5f-493a-a4f0-7e9f71157b39",
+    "name": "Canto PIM bulk_products_catalogs variants API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n",
+      "type": "text/plain"
+    }
+  }
+}

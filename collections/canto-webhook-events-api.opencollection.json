@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs webhook_events API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "webhook_events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Webhook Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks/:webhook_id/events",
+            "params": [
+              {
+                "name": "webhook_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Retrieve all webhook event logs\n"
+        },
+        {
+          "info": {
+            "name": "Purge Webhook Events",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/webhooks/:webhook_id/events/purge",
+            "params": [
+              {
+                "name": "webhook_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "    Clear webhook event history\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

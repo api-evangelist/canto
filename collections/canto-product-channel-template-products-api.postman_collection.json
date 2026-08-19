@@ -1,0 +1,1940 @@
+{
+  "item": [
+    {
+      "id": "cbd5a156-6469-4846-8309-1213c8c488bd",
+      "name": "product_channel_template_products",
+      "description": {
+        "content": "Manage products associated with product channel templates.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "40443b9f-0de7-465e-9919-6e0aee8a5755",
+          "name": "Get Product Channel Template Products",
+          "request": {
+            "name": "Get Product Channel Template Products",
+            "description": {
+              "content": "    List products in a specific product channel template\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_channel_templates",
+                ":product_channel_template_id",
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_channel_template_id",
+                  "description": "(Required) Product Channel Template ID"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b050f4b8-f448-47c6-88ba-c913c52e506e",
+              "name": "Successfully fetched Products",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "Number of items per page",
+                  "key": "page-items",
+                  "value": "9177"
+                },
+                {
+                  "disabled": false,
+                  "description": "Standard link header defined in RFC 8228. Contains links for first, last, next, and prev pages with respective `rel` attributes",
+                  "key": "link",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Current page number",
+                  "key": "current-page",
+                  "value": "9177"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of items",
+                  "key": "total-count",
+                  "value": "9177"
+                },
+                {
+                  "disabled": false,
+                  "description": "Total number of pages",
+                  "key": "total-pages",
+                  "value": "9177"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"products\": [\n    {\n      \"id\": 2402,\n      \"product_category_id\": 571,\n      \"product_type_id\": 393,\n      \"has_variants\": true,\n      \"dimension1_id\": 5819,\n      \"dimension2_id\": 3258,\n      \"dimension3_id\": 5877,\n      \"created_at\": \"1985-12-31T23:18:45.534Z\",\n      \"updated_at\": \"2008-02-24T19:27:24.599Z\",\n      \"user_id\": \"string\",\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 5049,\n          \"product_attribute_group_id\": 4582\n        },\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 7864,\n          \"product_attribute_group_id\": 6850\n        }\n      ],\n      \"variants\": [\n        {\n          \"id\": 9898,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5500,\n              \"dimension_option_id\": 8811\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4699,\n              \"dimension_option_id\": 2898\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 1228,\n              \"dimension_option_id\": 7559\n            }\n          }\n        },\n        {\n          \"id\": 6346,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 8018,\n              \"dimension_option_id\": 6666\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4311,\n              \"dimension_option_id\": 9932\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 2194,\n              \"dimension_option_id\": 4756\n            }\n          }\n        }\n      ]\n    },\n    {\n      \"id\": 8606,\n      \"product_category_id\": 6630,\n      \"product_type_id\": 5267,\n      \"has_variants\": false,\n      \"dimension1_id\": 9854,\n      \"dimension2_id\": 5385,\n      \"dimension3_id\": 9733,\n      \"created_at\": \"1978-07-02T10:05:50.717Z\",\n      \"updated_at\": \"1965-03-16T17:39:39.230Z\",\n      \"user_id\": \"string\",\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 4784,\n          \"product_attribute_group_id\": 8618\n        },\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 58,\n          \"product_attribute_group_id\": 4224\n        }\n      ],\n      \"variants\": [\n        {\n          \"id\": 4707,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5354,\n              \"dimension_option_id\": 7448\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4721,\n              \"dimension_option_id\": 7146\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4495,\n              \"dimension_option_id\": 2574\n            }\n          }\n        },\n        {\n          \"id\": 2796,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5520,\n              \"dimension_option_id\": 4638\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 9975,\n              \"dimension_option_id\": 8490\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 9747,\n              \"dimension_option_id\": 7196\n            }\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "46ee5e21-061f-4ac9-b462-aecfa58fe4b0",
+              "name": "The request parameters were invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "059a6d17-114a-4fb7-bcbc-5943c5c7b03d",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0cc8faa2-61e7-4d0c-8154-249727ef29a6",
+              "name": "Product Channel Template ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "784ded4b-a004-4c97-9d2a-98888bff925c",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4b7e351b-230c-4199-be70-095aebc28aaf",
+          "name": "Add a single Product to a Channel Template",
+          "request": {
+            "name": "Add a single Product to a Channel Template",
+            "description": {
+              "content": "    Add a single Product to a Channel Template. If you wish to add multiple products, use the bulk endpoint instead.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_channel_templates",
+                ":product_channel_template_id",
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_channel_template_id",
+                  "description": "(Required) Product Channel Template ID"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dddd9e36-6def-4012-9735-a7fedf030ece",
+              "name": "Successfully added the product to the channel template",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"product_id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": 8396,\n  \"product_category_id\": 6500,\n  \"product_type_id\": 1723,\n  \"has_variants\": false,\n  \"dimension1_id\": 654,\n  \"dimension2_id\": 4424,\n  \"dimension3_id\": 3402,\n  \"created_at\": \"2014-05-17T13:42:01.947Z\",\n  \"updated_at\": \"1994-03-17T17:40:44.363Z\",\n  \"user_id\": \"string\",\n  \"product_custom_attributes\": [\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 703,\n      \"product_attribute_group_id\": 2112,\n      \"variants\": [\n        {\n          \"id\": 2446,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4379,\n              \"dimension_option_id\": 6378\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 7055,\n              \"dimension_option_id\": 359\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5347,\n              \"dimension_option_id\": 4302\n            }\n          }\n        },\n        {\n          \"id\": 1931,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 2493,\n              \"dimension_option_id\": 2984\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 8405,\n              \"dimension_option_id\": 9508\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 6698,\n              \"dimension_option_id\": 7228\n            }\n          }\n        }\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"value\": \"string\",\n      \"data_type\": \"string\",\n      \"product_custom_attribute_id\": 3054,\n      \"product_attribute_group_id\": 8914,\n      \"variants\": [\n        {\n          \"id\": 7517,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 1140,\n              \"dimension_option_id\": 1966\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 1734,\n              \"dimension_option_id\": 707\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 1868,\n              \"dimension_option_id\": 4956\n            }\n          }\n        },\n        {\n          \"id\": 7497,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 24,\n              \"dimension_option_id\": 654\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 9461,\n              \"dimension_option_id\": 8676\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 9702,\n              \"dimension_option_id\": 528\n            }\n          }\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "b15f8a67-99f8-41ca-9a4c-ed39f23ecb52",
+              "name": "The request parameters were invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"product_id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0fb01f82-f205-4629-bd03-189d3b5b0cfb",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"product_id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "38565e92-34e7-4964-86d4-2c1c0b719577",
+              "name": "Product or Channel Template ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"product_id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f86bec67-852b-4241-a6ba-3a7fbe8e8ddc",
+              "name": "There was an error adding the product to the channel template",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"product_id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "09f45e45-3678-4d2d-953b-c896465e9d25",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"product_id\": 1\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6a9693f5-c97d-45ef-a2e7-651eb41b31ba",
+          "name": "Get Product Channel Template Product",
+          "request": {
+            "name": "Get Product Channel Template Product",
+            "description": {
+              "content": "    Retrieve a specific product from a product channel template\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_channel_templates",
+                ":product_channel_template_id",
+                "products",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "include_share_link",
+                  "value": "<boolean>",
+                  "description": "Include Share Link URL in response TODO: still defining"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_channel_template_id",
+                  "description": "(Required) Product Channel Template ID"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) Product ID"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "90d7ce13-300f-445e-ad3f-a336cc1aedf9",
+              "name": "Successfully fetched Product from Channel Template",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_share_link",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"id\": 1,\n  \"product_category_id\": 1,\n  \"product_type_id\": 1,\n  \"has_variants\": true,\n  \"dimension1_id\": 1,\n  \"dimension2_id\": 2,\n  \"dimension3_id\": 3,\n  \"created_at\": \"2021-08-01T00:00:00.000Z\",\n  \"updated_at\": \"2021-08-01T00:00:00.000Z\",\n  \"user_id\": \"123e4567e89b12d3a456\",\n  \"product_custom_attributes\": [\n    {\n      \"name\": \"name\",\n      \"value\": \"Product 1\",\n      \"data_type\": \"text\",\n      \"product_custom_attribute_id\": 1,\n      \"product_attribute_group_id\": null\n    },\n    {\n      \"name\": \"sku\",\n      \"value\": \"SKU1\",\n      \"data_type\": \"text\",\n      \"product_custom_attribute_id\": 2,\n      \"product_attribute_group_id\": null\n    },\n    {\n      \"name\": \"Price\",\n      \"value\": \"10.00\",\n      \"data_type\": \"text\",\n      \"product_custom_attribute_id\": 3,\n      \"product_attribute_group_id\": 1\n    },\n    {\n      \"name\": \"An Image\",\n      \"value\": null,\n      \"data_type\": \"image\",\n      \"asset_ids\": [\n        \"abc123\",\n        \"def234\"\n      ],\n      \"product_custom_attribute_id\": 4,\n      \"product_attribute_group_id\": 2\n    }\n  ],\n  \"variants\": [\n    {\n      \"id\": 5035,\n      \"dimension_options\": {\n        \"primary\": {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"dimension_id\": 8708,\n          \"dimension_option_id\": 2513\n        },\n        \"secondary\": {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"dimension_id\": 3819,\n          \"dimension_option_id\": 4874\n        },\n        \"tertiary\": {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"dimension_id\": 6035,\n          \"dimension_option_id\": 5714\n        }\n      },\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 9562,\n          \"product_attribute_group_id\": 8131\n        },\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 581,\n          \"product_attribute_group_id\": 6822\n        }\n      ]\n    },\n    {\n      \"id\": 2534,\n      \"dimension_options\": {\n        \"primary\": {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"dimension_id\": 3203,\n          \"dimension_option_id\": 6354\n        },\n        \"secondary\": {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"dimension_id\": 9490,\n          \"dimension_option_id\": 4723\n        },\n        \"tertiary\": {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"dimension_id\": 4901,\n          \"dimension_option_id\": 3206\n        }\n      },\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 8322,\n          \"product_attribute_group_id\": 3372\n        },\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 9726,\n          \"product_attribute_group_id\": 1814\n        }\n      ]\n    }\n  ],\n  \"product_assets\": [\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        4694,\n        2652\n      ]\n    },\n    {\n      \"asset_id\": \"string\",\n      \"product_ids\": [\n        6975,\n        6816\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f99e9958-98a2-4a98-974e-75ea3c9e5f95",
+              "name": "The request parameters were invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_share_link",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "d678b4db-2d59-403a-b46e-a9c4f1ecaddb",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_share_link",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a77697c1-23d5-49f4-bf08-1d971d8d6437",
+              "name": "Product Channel Template or Product ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_share_link",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "82d31589-bc4a-46ef-a499-896d0623dd2b",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "include_share_link",
+                      "value": "<boolean>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "633f5852-840c-4b70-b40b-5547f26861d7",
+          "name": "Remove a single Product from a Channel Template",
+          "request": {
+            "name": "Remove a single Product from a Channel Template",
+            "description": {
+              "content": "    Remove a single Product from a Channel Template. If you wish to remove multiple products, use the bulk endpoint instead.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "product_channel_templates",
+                ":product_channel_template_id",
+                "products",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "product_channel_template_id",
+                  "description": "(Required) Product Channel Template ID"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<number>",
+                  "key": "id",
+                  "description": "(Required) Product ID"
+                },
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b28515bf-43c4-43d3-a369-c891cfe0aab4",
+              "name": "Successfully removed product from the channel template",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "8fcce201-bc28-43c3-ade3-f0fc64ec8901",
+              "name": "The request parameters were invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a56a8601-caad-449d-8fdd-0e478eec2e1c",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cea75bcb-27ae-4a80-a041-c4b8a75f1eed",
+              "name": "Product or Channel Template ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "e39433a7-a099-455c-9eb0-43625cf422d4",
+              "name": "There was an error removing product from the channel template",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "98813e72-b043-436d-b42c-8961dce1392e",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "product_channel_templates",
+                    ":product_channel_template_id",
+                    "products",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "product_channel_template_id",
+                      "description": "(Required) Product Channel Template ID"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<number>",
+                      "key": "id",
+                      "description": "(Required) Product ID"
+                    },
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "demo",
+      "key": "tenantSubdomain"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "canto.com",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantSubdomain}}.{{region}}/api/v1/pim/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "b7c59b48-d5b7-4ed8-8f6c-1c3665b263c0",
+    "name": "Canto PIM bulk_products_catalogs product_channel_template_products API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n",
+      "type": "text/plain"
+    }
+  }
+}

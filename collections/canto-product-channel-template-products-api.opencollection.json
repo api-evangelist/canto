@@ -1,0 +1,122 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_channel_template_products API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_channel_template_products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Channel Template Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id/products",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              }
+            ]
+          },
+          "docs": "    List products in a specific product channel template\n"
+        },
+        {
+          "info": {
+            "name": "Add a single Product to a Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id/products",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Add a single Product to a Channel Template. If you wish to add multiple products, use the bulk endpoint instead.\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Channel Template Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id/products/:id",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Product ID"
+              },
+              {
+                "name": "include_share_link",
+                "value": "",
+                "type": "query",
+                "description": "Include Share Link URL in response TODO: still defining"
+              }
+            ]
+          },
+          "docs": "    Retrieve a specific product from a product channel template\n"
+        },
+        {
+          "info": {
+            "name": "Remove a single Product from a Channel Template",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_channel_templates/:product_channel_template_id/products/:id",
+            "params": [
+              {
+                "name": "product_channel_template_id",
+                "value": "",
+                "type": "path",
+                "description": "Product Channel Template ID"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Product ID"
+              }
+            ]
+          },
+          "docs": "    Remove a single Product from a Channel Template. If you wish to remove multiple products, use the bulk endpoint instead.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

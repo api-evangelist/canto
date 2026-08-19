@@ -1,0 +1,519 @@
+{
+  "item": [
+    {
+      "id": "3fde56cc-1227-49e6-82a1-d6671dc81848",
+      "name": "bulk_products_catalogs",
+      "description": {
+        "content": "Perform bulk products operation on a Product Catalog\n  \nThese endpoints allow you to add or remove products  that are associated with a specific product catalog in bulk.\n",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "06264009-ff8f-4146-8136-063c9c507e58",
+          "name": "Perform bulk products operation on a Product Catalog",
+          "request": {
+            "name": "Perform bulk products operation on a Product Catalog",
+            "description": {
+              "content": "    Perform bulk products operation on a Product Catalog\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "bulk",
+                "products",
+                "product_catalogs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": {
+                    "content": "",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "{{tenantSubdomain}}",
+                  "key": "tenantSubdomain"
+                },
+                {
+                  "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "*/*"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"operation\": \"<string>\",\n  \"product_catalog_id\": \"<integer>\",\n  \"product_ids\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9cc24002-b960-49d2-9d2a-acf5e7d2c219",
+              "name": "Bulk products operation on Product Catalog successful",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bulk",
+                    "products",
+                    "product_catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "*/*"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"operation\": \"add\",\n  \"product_catalog_id\": 1,\n  \"product_ids\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "*/*"
+                }
+              ],
+              "body": "{\n  \"products\": [\n    {\n      \"id\": 2498,\n      \"product_category_id\": 8636,\n      \"product_type_id\": 322,\n      \"has_variants\": false,\n      \"dimension1_id\": 4973,\n      \"dimension2_id\": 686,\n      \"dimension3_id\": 9531,\n      \"created_at\": \"1969-05-15T12:48:08.313Z\",\n      \"updated_at\": \"1961-06-07T08:05:59.607Z\",\n      \"user_id\": \"string\",\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 8831,\n          \"product_attribute_group_id\": 524\n        },\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 4832,\n          \"product_attribute_group_id\": 5889\n        }\n      ],\n      \"variants\": [\n        {\n          \"id\": 2378,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 7269,\n              \"dimension_option_id\": 8171\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4414,\n              \"dimension_option_id\": 3853\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5668,\n              \"dimension_option_id\": 105\n            }\n          },\n          \"product_custom_attributes\": [\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 9993,\n              \"product_attribute_group_id\": 8141\n            },\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 9189,\n              \"product_attribute_group_id\": 6268\n            }\n          ]\n        },\n        {\n          \"id\": 1986,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 9960,\n              \"dimension_option_id\": 2416\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 7091,\n              \"dimension_option_id\": 903\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 414,\n              \"dimension_option_id\": 7300\n            }\n          },\n          \"product_custom_attributes\": [\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 9492,\n              \"product_attribute_group_id\": 3552\n            },\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 1582,\n              \"product_attribute_group_id\": 5501\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"id\": 6178,\n      \"product_category_id\": 7725,\n      \"product_type_id\": 5821,\n      \"has_variants\": false,\n      \"dimension1_id\": 6080,\n      \"dimension2_id\": 3731,\n      \"dimension3_id\": 6613,\n      \"created_at\": \"1952-03-02T05:18:18.116Z\",\n      \"updated_at\": \"1979-07-18T19:20:26.772Z\",\n      \"user_id\": \"string\",\n      \"product_custom_attributes\": [\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 5787,\n          \"product_attribute_group_id\": 5055\n        },\n        {\n          \"name\": \"string\",\n          \"value\": \"string\",\n          \"data_type\": \"string\",\n          \"product_custom_attribute_id\": 8424,\n          \"product_attribute_group_id\": 4756\n        }\n      ],\n      \"variants\": [\n        {\n          \"id\": 6856,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 4568,\n              \"dimension_option_id\": 528\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5000,\n              \"dimension_option_id\": 9660\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 7998,\n              \"dimension_option_id\": 7815\n            }\n          },\n          \"product_custom_attributes\": [\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 2101,\n              \"product_attribute_group_id\": 6815\n            },\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 6046,\n              \"product_attribute_group_id\": 6417\n            }\n          ]\n        },\n        {\n          \"id\": 1985,\n          \"dimension_options\": {\n            \"primary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 7013,\n              \"dimension_option_id\": 2674\n            },\n            \"secondary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 138,\n              \"dimension_option_id\": 3411\n            },\n            \"tertiary\": {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"dimension_id\": 5143,\n              \"dimension_option_id\": 2368\n            }\n          },\n          \"product_custom_attributes\": [\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 8397,\n              \"product_attribute_group_id\": 7286\n            },\n            {\n              \"name\": \"string\",\n              \"value\": \"string\",\n              \"data_type\": \"string\",\n              \"product_custom_attribute_id\": 1579,\n              \"product_attribute_group_id\": 4199\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "01e931d2-2256-4934-a825-94b5599a3cbf",
+              "name": "The request parameters were invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bulk",
+                    "products",
+                    "product_catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"operation\": \"add\",\n  \"product_catalog_id\": 1,\n  \"product_ids\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "07a9b3f7-9dcb-4817-839b-db6109a52941",
+              "name": "User is not permitted to use the API or Authentication is invalid",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bulk",
+                    "products",
+                    "product_catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"operation\": \"add\",\n  \"product_catalog_id\": 1,\n  \"product_ids\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "cd69d1e8-a7ed-4637-9844-83c6881cc93d",
+              "name": "Product Catalog ID not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bulk",
+                    "products",
+                    "product_catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"operation\": \"add\",\n  \"product_catalog_id\": 1,\n  \"product_ids\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "59a5bb21-c963-46cd-b861-34ea7035a222",
+              "name": "There was an error with your bulk products operation on the catalog",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bulk",
+                    "products",
+                    "product_catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"operation\": \"add\",\n  \"product_catalog_id\": 1,\n  \"product_ids\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "62aa521e-76c0-4291-925a-facf6bebeb22",
+              "name": "Something went wrong",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "bulk",
+                    "products",
+                    "product_catalogs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": {
+                        "content": "",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "{{tenantSubdomain}}",
+                      "key": "tenantSubdomain"
+                    },
+                    {
+                      "description": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"operation\": \"add\",\n  \"product_catalog_id\": 1,\n  \"product_ids\": [\n    1,\n    2,\n    3,\n    4,\n    5\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "demo",
+      "key": "tenantSubdomain"
+    },
+    {
+      "description": {
+        "content": " (This can only be one of canto.com,canto.global,canto.de,au.canto.com,ca.canto.com)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "canto.com",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "https://{{tenantSubdomain}}.{{region}}/api/v1/pim/",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "aeb834a5-dad7-457c-8c34-522dd797c965",
+    "name": "Canto PIM bulk_products_catalogs API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n",
+      "type": "text/plain"
+    }
+  }
+}

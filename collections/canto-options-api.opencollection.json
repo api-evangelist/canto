@@ -1,0 +1,100 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs options API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "options",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Update Dimension Option",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions/:dimension_id/options/:id",
+            "params": [
+              {
+                "name": "dimension_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update the value of an option within a dimension\n"
+        },
+        {
+          "info": {
+            "name": "Update Dimension Option",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions/:dimension_id/options/:id",
+            "params": [
+              {
+                "name": "dimension_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Update the value of an option within a dimension\n"
+        },
+        {
+          "info": {
+            "name": "Create Dimension Option",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/dimensions/:dimension_id/options",
+            "params": [
+              {
+                "name": "dimension_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Add a new option to a dimension\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

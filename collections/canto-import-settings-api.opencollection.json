@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs import_settings API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "import_settings",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Configure import mappings and variation formats",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/import_settings",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Creates or retrieves channel template and format settings based on provided mappings.\n\n    This endpoint helps configure how CSV data will be imported by:\n    1. Mapping CSV headers to product attributes\n    2. Defining how variations should be grouped\n    3. Specifying dimension and option columns\n\n    Returns IDs needed for the actual import process.\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

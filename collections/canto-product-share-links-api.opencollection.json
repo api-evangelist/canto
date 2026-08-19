@@ -1,0 +1,88 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Canto PIM bulk_products_catalogs product_share_links API",
+    "version": "v1.0.1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "product_share_links",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Product Share Links",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_share_links"
+          },
+          "docs": "    List all shareable links created for product pages\n"
+        },
+        {
+          "info": {
+            "name": "Create Product Share Link",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_share_links",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "    Generate a new share link for a product.\n"
+        },
+        {
+          "info": {
+            "name": "Get Product Share Link",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_share_links/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Share Link ID"
+              }
+            ]
+          },
+          "docs": "    Get details of a specific share link.\n"
+        },
+        {
+          "info": {
+            "name": "Delete Product Share Link",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{tenantSubdomain}.{region}/api/v1/pim/product_share_links/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "Share Link ID"
+              }
+            ]
+          },
+          "docs": "    Remove a product share link\n"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
