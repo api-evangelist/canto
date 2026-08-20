@@ -23,6 +23,15 @@ tags:
   - Digital Asset Management
   - DAM
   - Brand Assets
+  - Image
+  - Videos
+  - Documents
+  - Media Library
+  - Asset Distribution
+tags_raw:
+  - Digital Asset Management
+  - DAM
+  - Brand Assets
   - Images
   - Videos
   - Documents
@@ -35,7 +44,8 @@ apis:
     \ add or remove products  that are associated with a specific product catalog in bulk."
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - bulk_products_catalogs
   properties:
   - type: OpenAPI
@@ -48,7 +58,8 @@ apis:
     \ you to add or remove products  that are associated with a specific channel template in bulk."
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - bulk_products_channel_templates
   properties:
   - type: OpenAPI
@@ -61,6 +72,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Dimensions
+  tags_raw:
   - dimensions
   properties:
   - type: OpenAPI
@@ -81,6 +94,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Filter
+  tags_raw:
   - filter
   properties:
   - type: OpenAPI
@@ -97,7 +112,8 @@ apis:
             - Setting up category and type assignments
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - import_settings
   properties:
   - type: OpenAPI
@@ -112,6 +128,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Imports
+  tags_raw:
   - imports
   properties:
   - type: OpenAPI
@@ -124,6 +142,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Options
+  tags_raw:
   - options
   properties:
   - type: OpenAPI
@@ -136,7 +156,8 @@ apis:
     The product_catalog_products API from Canto — 2 operation(s) for product_catalog_products.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - product_catalog_products
   properties:
   - type: OpenAPI
@@ -149,6 +170,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Product Catalogs
+  tags_raw:
   - product_catalogs
   properties:
   - type: OpenAPI
@@ -161,6 +184,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Product Categories
+  tags_raw:
   - product_categories
   properties:
   - type: OpenAPI
@@ -172,7 +197,8 @@ apis:
   description: Manage products associated with product channel templates.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - product_channel_template_products
   properties:
   - type: OpenAPI
@@ -186,7 +212,8 @@ apis:
     data into and out of Canto PIM.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - product_channel_templates
   properties:
   - type: OpenAPI
@@ -199,7 +226,8 @@ apis:
     The product_custom_attributes API from Canto — 2 operation(s) for product_custom_attributes.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - product_custom_attributes
   properties:
   - type: OpenAPI
@@ -214,7 +242,8 @@ apis:
     outside the PIM system. These links can have custom names and optionally expire.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags:
+  tags: []
+  tags_raw:
   - product_share_links
   properties:
   - type: OpenAPI
@@ -227,6 +256,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Product Types
+  tags_raw:
   - product_types
   properties:
   - type: OpenAPI
@@ -239,6 +270,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Product
+  tags_raw:
   - products
   properties:
   - type: OpenAPI
@@ -251,6 +284,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Variants
+  tags_raw:
   - variants
   properties:
   - type: OpenAPI
@@ -263,6 +298,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Webhook Events
+  tags_raw:
   - webhook_events
   properties:
   - type: OpenAPI
@@ -296,6 +333,8 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
+  - Webhook
+  tags_raw:
   - webhooks
   properties:
   - type: OpenAPI
