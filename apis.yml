@@ -1,6 +1,18 @@
 aid: canto
 name: Canto
 description: Canto is a digital asset management (DAM) platform offering a fully documented REST API for organizing, tagging, distributing, and sharing brand assets including images, videos, and documents across teams and channels. The API uses OAuth 2.0 for authentication and provides endpoints for asset search, metadata management, folder and album operations, automated workflows, and asset distribution.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
