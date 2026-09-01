@@ -84,7 +84,7 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
-  - dimensions
+  - Dimensions
   tags_raw:
   - dimensions
   properties:
@@ -106,7 +106,7 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
-  - filter
+  - Filter
   tags_raw:
   - filter
   properties:
@@ -181,7 +181,8 @@ apis:
   description: The product_catalogs API from Canto — 2 operation(s) for product_catalogs.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags: []
+  tags:
+  - Product Catalogs
   tags_raw:
   - product_catalogs
   properties:
@@ -194,7 +195,8 @@ apis:
   description: The product_categories API from Canto — 2 operation(s) for product_categories.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags: []
+  tags:
+  - Product Categories
   tags_raw:
   - product_categories
   properties:
@@ -265,7 +267,8 @@ apis:
   description: The product_types API from Canto — 2 operation(s) for product_types.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags: []
+  tags:
+  - Product Types
   tags_raw:
   - product_types
   properties:
@@ -293,7 +296,7 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
-  - variants
+  - Variants
   tags_raw:
   - variants
   properties:
@@ -306,7 +309,8 @@ apis:
   description: The webhook_events API from Canto — 2 operation(s) for webhook_events.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
-  tags: []
+  tags:
+  - Webhook Events
   tags_raw:
   - webhook_events
   properties:
