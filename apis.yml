@@ -36,7 +36,7 @@ tags:
   - Digital Asset Management
   - Brand Assets
   - Image
-  - Videos
+  - Video
   - Documents
   - Media Library
   - Asset Distribution
@@ -140,7 +140,7 @@ apis:
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
   tags:
-  - Imports
+  - Import
   tags_raw:
   - imports
   properties:
