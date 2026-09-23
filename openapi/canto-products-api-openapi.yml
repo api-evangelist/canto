@@ -1,7 +1,7 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Canto PIM bulk_products_catalogs products API
-  description: "\n[Canto APIs](https://api.canto.com) enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content. \nThe API outlined here provides programmatic access to Canto’s Product Hub (PIM).  The Product Hub API allows authorized systems to create, retrieve, update, and manage rich product data for use across digital channels, e-commerce platforms, and other target or source systems. \n \n<b>Key Capabilities</b><br />\nThe Canto Product Hub API enables full product data management:\n1. Product Record Management:  Create, read, update, and delete product entries including structured metadata, taxonomy, categories, and references.\n2. Attribute & Schema Configuration:  Access and manage custom product attributes and classification structures\n3. Webhooks:  Trigger updates or publish product datasets to downstream systems and integration pipelines.\n \n<b>API Design</b>\n- The PIM API adheres to <b>RESTful principles</b>, supporting standard HTTP methods (GET, POST, PUT, PATCH, DELETE).\n- JSON is the default payload format for both requests and responses.\n\n<b>HTTP Status Code Conventions</b><br />\nBelow are general HTTP codes applicable across most endpoints:<br />\n- <b>200, 201, 204</b> – Successful operations (retrieval, creation, update, deletion).\n- <b>400</b> – Bad request. Input payloads did not conform to the expected schema or required parameters were missing.\n- <b>401 / 403</b> – Authentication or authorization failed.\n- <b>404</b> – The route or resource was not found.\n- <b>409</b> – Conflict in resource state (e.g., duplicate product identifier).\n- <b>429</b> - Too many requests. See Rate Limits below.\n- <b>500</b> – An unexpected server error occurred.\n- <b>502 / 503 / 504</b> – Infrastructure issues such as load balancer, service unavailability, or timeouts.\n\n<b>API Rate Limits</b><br />\nRate limits are how many API calls you can make in a given time frame. If your call exceeds the pre-defined rate limit, you will run into a “429” http error-code. After which, you will need to wait until you can make another API call.\n\n<b>PIM API Rate Limit:</b> 5 requests/second\n"
+  title: Canto PIM Products API
+  description: Canto APIs enable seamless synchronization between the PIM + DAM and external systems that rely on accurate, up-to-date product content.
   version: v1.0.1
 servers:
 - url: https://{tenantSubdomain}.{region}/api/v1/pim/
@@ -19,16 +19,14 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: products
+- name: Products
 paths:
   /products:
     get:
       tags:
-      - products
+      - Products
       summary: Get Products
-      description: '    List all products in the catalog
-
-        '
+      description: List all products in the catalog
       operationId: get_api_v1_products
       responses:
         '200':
@@ -80,16 +78,19 @@ paths:
                           type: boolean
                           description: Whether the product has variants
                         dimension1_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                           description: First dimension ID
                         dimension2_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                           description: Second dimension ID
                         dimension3_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                           description: Third dimension ID
                         created_at:
                           type: string
@@ -121,8 +122,9 @@ paths:
                                 type: integer
                                 description: Custom attribute ID
                               product_attribute_group_id:
-                                type: integer
-                                nullable: true
+                                type:
+                                - integer
+                                - 'null'
                                 description: Attribute group ID
                         variants:
                           type: array
@@ -138,8 +140,9 @@ paths:
                                 description: Dimension options for the variant
                                 properties:
                                   primary:
-                                    type: object
-                                    nullable: true
+                                    type:
+                                    - object
+                                    - 'null'
                                     properties:
                                       name:
                                         type: string
@@ -154,8 +157,9 @@ paths:
                                         type: integer
                                         description: Dimension option ID
                                   secondary:
-                                    type: object
-                                    nullable: true
+                                    type:
+                                    - object
+                                    - 'null'
                                     properties:
                                       name:
                                         type: string
@@ -170,8 +174,9 @@ paths:
                                         type: integer
                                         description: Dimension option ID
                                   tertiary:
-                                    type: object
-                                    nullable: true
+                                    type:
+                                    - object
+                                    - 'null'
                                     properties:
                                       name:
                                         type: string
@@ -204,8 +209,9 @@ paths:
                                       type: integer
                                       description: Custom attribute ID
                                     product_attribute_group_id:
-                                      type: integer
-                                      nullable: true
+                                      type:
+                                      - integer
+                                      - 'null'
                                       description: Attribute group ID
                 additionalProperties: false
         '401':
@@ -216,11 +222,9 @@ paths:
           content: {}
     post:
       tags:
-      - products
+      - Products
       summary: Create Product
-      description: '    Add a new product
-
-        '
+      description: Add a new product
       operationId: post_api_v1_products
       requestBody:
         content:
@@ -331,15 +335,17 @@ paths:
                         name:
                           type: string
                         value:
-                          type: string
-                          nullable: true
+                          type:
+                          - string
+                          - 'null'
                         data_type:
                           type: string
                         product_custom_attribute_id:
                           type: integer
                         product_attribute_group_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                         asset_ids:
                           type: array
                           items:
@@ -379,7 +385,9 @@ paths:
                           type: object
                           properties:
                             primary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -389,9 +397,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             secondary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -401,9 +410,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             tertiary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -413,7 +423,6 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                         product_custom_attributes:
                           type: array
                           items:
@@ -422,15 +431,17 @@ paths:
                               name:
                                 type: string
                               value:
-                                type: string
-                                nullable: true
+                                type:
+                                - string
+                                - 'null'
                               data_type:
                                 type: string
                               product_custom_attribute_id:
                                 type: integer
                               product_attribute_group_id:
-                                type: integer
-                                nullable: true
+                                type:
+                                - integer
+                                - 'null'
                               asset_ids:
                                 type: array
                                 items:
@@ -496,11 +507,9 @@ paths:
   /products/{id}:
     get:
       tags:
-      - products
+      - Products
       summary: Get Product
-      description: '    Retrieve details for a specific product by ID
-
-        '
+      description: Retrieve details for a specific product by ID
       operationId: get_api_v1_products_id
       parameters:
       - name: id
@@ -556,15 +565,17 @@ paths:
                         name:
                           type: string
                         value:
-                          type: string
-                          nullable: true
+                          type:
+                          - string
+                          - 'null'
                         data_type:
                           type: string
                         product_custom_attribute_id:
                           type: integer
                         product_attribute_group_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                         asset_ids:
                           type: array
                           items:
@@ -604,7 +615,9 @@ paths:
                           type: object
                           properties:
                             primary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -614,9 +627,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             secondary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -626,9 +640,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             tertiary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -638,7 +653,6 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                         product_custom_attributes:
                           type: array
                           items:
@@ -653,8 +667,9 @@ paths:
                               product_custom_attribute_id:
                                 type: integer
                               product_attribute_group_id:
-                                type: integer
-                                nullable: true
+                                type:
+                                - integer
+                                - 'null'
                     example:
                     - id: 5
                       dimension_options:
@@ -744,11 +759,9 @@ paths:
           content: {}
     put:
       tags:
-      - products
+      - Products
       summary: Update Product
-      description: '    Update a product
-
-        '
+      description: Update a product
       operationId: put_api_v1_products_id
       parameters:
       - name: id
@@ -865,15 +878,17 @@ paths:
                         name:
                           type: string
                         value:
-                          type: string
-                          nullable: true
+                          type:
+                          - string
+                          - 'null'
                         data_type:
                           type: string
                         product_custom_attribute_id:
                           type: integer
                         product_attribute_group_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                         asset_ids:
                           type: array
                           items:
@@ -913,7 +928,9 @@ paths:
                           type: object
                           properties:
                             primary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -923,9 +940,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             secondary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -935,9 +953,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             tertiary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -947,7 +966,6 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                         product_custom_attributes:
                           type: array
                           items:
@@ -956,15 +974,17 @@ paths:
                               name:
                                 type: string
                               value:
-                                type: string
-                                nullable: true
+                                type:
+                                - string
+                                - 'null'
                               data_type:
                                 type: string
                               product_custom_attribute_id:
                                 type: integer
                               product_attribute_group_id:
-                                type: integer
-                                nullable: true
+                                type:
+                                - integer
+                                - 'null'
                               asset_ids:
                                 type: array
                                 items:
@@ -1032,11 +1052,9 @@ paths:
           content: {}
     delete:
       tags:
-      - products
+      - Products
       summary: Delete Product
-      description: '    Delete a product from the catalog
-
-        '
+      description: Delete a product from the catalog
       operationId: delete_api_v1_products_id
       parameters:
       - name: id
@@ -1062,11 +1080,9 @@ paths:
           content: {}
     patch:
       tags:
-      - products
+      - Products
       summary: Update Product
-      description: '    Update a product
-
-        '
+      description: Update a product
       operationId: patch_api_v1_products_id
       parameters:
       - name: id
@@ -1183,15 +1199,17 @@ paths:
                         name:
                           type: string
                         value:
-                          type: string
-                          nullable: true
+                          type:
+                          - string
+                          - 'null'
                         data_type:
                           type: string
                         product_custom_attribute_id:
                           type: integer
                         product_attribute_group_id:
-                          type: integer
-                          nullable: true
+                          type:
+                          - integer
+                          - 'null'
                         asset_ids:
                           type: array
                           items:
@@ -1231,7 +1249,9 @@ paths:
                           type: object
                           properties:
                             primary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -1241,9 +1261,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             secondary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -1253,9 +1274,10 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                             tertiary:
-                              type: object
+                              type:
+                              - object
+                              - 'null'
                               properties:
                                 name:
                                   type: string
@@ -1265,7 +1287,6 @@ paths:
                                   type: integer
                                 dimension_option_id:
                                   type: integer
-                              nullable: true
                         product_custom_attributes:
                           type: array
                           items:
@@ -1274,15 +1295,17 @@ paths:
                               name:
                                 type: string
                               value:
-                                type: string
-                                nullable: true
+                                type:
+                                - string
+                                - 'null'
                               data_type:
                                 type: string
                               product_custom_attribute_id:
                                 type: integer
                               product_attribute_group_id:
-                                type: integer
-                                nullable: true
+                                type:
+                                - integer
+                                - 'null'
                               asset_ids:
                                 type: array
                                 items:
@@ -1351,7 +1374,7 @@ paths:
   /products/{product_id}/assets:
     post:
       tags:
-      - products
+      - Products
       summary: Add Assets to Product
       description: Add between 1 and 50 assets to a product
       operationId: post_api_v1_products_product_id_assets
@@ -1395,7 +1418,7 @@ paths:
           content: {}
     delete:
       tags:
-      - products
+      - Products
       summary: Remove Multiple Assets from Product
       description: Remove at least 1 and no more than 50 assets from a product
       operationId: delete_api_v1_products_product_id_assets
@@ -1430,7 +1453,7 @@ paths:
   /products/{product_id}/assets/{id}:
     delete:
       tags:
-      - products
+      - Products
       summary: Remove Single Asset from a Product
       description: Remove a single asset from a product
       operationId: delete_api_v1_products_product_id_assets_id

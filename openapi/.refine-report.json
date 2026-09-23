@@ -1,25 +1,7 @@
 {
   "provider": "canto",
   "sources": [
-    "canto-bulk-products-catalogs-api-openapi.yml",
-    "canto-bulk-products-channel-templates-api-openapi.yml",
-    "canto-dimensions-api-openapi.yml",
-    "canto-filter-api-openapi.yml",
-    "canto-import-settings-api-openapi.yml",
-    "canto-imports-api-openapi.yml",
-    "canto-options-api-openapi.yml",
-    "canto-product-catalog-products-api-openapi.yml",
-    "canto-product-catalogs-api-openapi.yml",
-    "canto-product-categories-api-openapi.yml",
-    "canto-product-channel-template-products-api-openapi.yml",
-    "canto-product-channel-templates-api-openapi.yml",
-    "canto-product-custom-attributes-api-openapi.yml",
-    "canto-product-share-links-api-openapi.yml",
-    "canto-product-types-api-openapi.yml",
-    "canto-products-api-openapi.yml",
-    "canto-variants-api-openapi.yml",
-    "canto-webhook-events-api-openapi.yml",
-    "canto-webhooks-api-openapi.yml"
+    "_original/canto-pim-openapi.json"
   ],
   "outputs": [
     "canto-bulk-products-catalogs-api-openapi.yml",
@@ -45,6 +27,40 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "canto-pim-openapi.json: upgraded openapi 3.0.1 -> OpenAPI 3.2.0",
+    "canto-pim-openapi.json: declared missing tag: dimensions",
+    "canto-pim-openapi.json: declared missing tag: options",
+    "canto-pim-openapi.json: declared missing tag: product_catalog_products",
+    "canto-pim-openapi.json: declared missing tag: product_catalogs",
+    "canto-pim-openapi.json: declared missing tag: product_categories",
+    "canto-pim-openapi.json: declared missing tag: product_custom_attributes",
+    "canto-pim-openapi.json: declared missing tag: product_types",
+    "canto-pim-openapi.json: declared missing tag: products",
+    "canto-pim-openapi.json: declared missing tag: variants",
+    "canto-pim-openapi.json: declared missing tag: webhook_events",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "canto-bulk-products-catalogs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-bulk-products-channel-templates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-dimensions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-filter-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-import-settings-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-imports-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-options-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-catalog-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-catalogs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-channel-template-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-channel-templates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-custom-attributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-share-links-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-product-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-variants-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-webhook-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "canto-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
