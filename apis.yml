@@ -51,7 +51,7 @@ tags_raw:
   - Asset Distribution
 apis:
 - aid: canto:canto-bulk-products-catalogs-api
-  name: Canto bulk_products_catalogs API
+  name: Canto Bulk Products Catalogs API
   description: "Perform bulk products operation on a Product Catalog\n  \nThese endpoints allow you to\
     \ add or remove products  that are associated with a specific product catalog in bulk."
   humanURL: https://www.canto.com/api/
@@ -65,7 +65,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-bulk-products-channel-templates-api
-  name: Canto bulk_products_channel_templates API
+  name: Canto Bulk Products Channel Templates API
   description: "Perform bulk products operation on a Product Channel Template\n  \nThese endpoints allow\
     \ you to add or remove products  that are associated with a specific channel template in bulk."
   humanURL: https://www.canto.com/api/
@@ -79,7 +79,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-dimensions-api
-  name: Canto dimensions API
+  name: Canto Dimensions API
   description: The dimensions API from Canto — 2 operation(s) for dimensions.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -93,7 +93,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-filter-api
-  name: Canto filter API
+  name: Canto Filter API
   description: >-
     API endpoints for filtering product attributes.
                 Allows filtering and retrieving product attributes based on various criteria including:
@@ -115,7 +115,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-import-settings-api
-  name: Canto import_settings API
+  name: Canto Import Settings API
   description: >-
     API endpoints for configuring how CSV imports should be processed.
             This includes:
@@ -133,7 +133,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-imports-api
-  name: Canto imports API
+  name: Canto Imports API
   description: >-
     API endpoint for importing products from a CSV file.
               Supports multipart form data uploads with import configuration.
@@ -149,7 +149,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-options-api
-  name: Canto options API
+  name: Canto Options API
   description: The options API from Canto — 2 operation(s) for options.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -163,7 +163,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-catalog-products-api
-  name: Canto product_catalog_products API
+  name: Canto Product Catalog Products API
   description: >-
     The product_catalog_products API from Canto — 2 operation(s) for product_catalog_products.
   humanURL: https://www.canto.com/api/
@@ -177,7 +177,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-catalogs-api
-  name: Canto product_catalogs API
+  name: Canto Product Catalogs API
   description: The product_catalogs API from Canto — 2 operation(s) for product_catalogs.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -191,7 +191,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-categories-api
-  name: Canto product_categories API
+  name: Canto Product Categories API
   description: The product_categories API from Canto — 2 operation(s) for product_categories.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -205,7 +205,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-channel-template-products-api
-  name: Canto product_channel_template_products API
+  name: Canto Product Channel Template Products API
   description: Manage products associated with product channel templates.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -218,7 +218,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-channel-templates-api
-  name: Canto product_channel_templates API
+  name: Canto Product Channel Templates API
   description: >-
     Product Channel Templates define the structure and configuration for importing and exporting product
     data into and out of Canto PIM.
@@ -233,7 +233,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-custom-attributes-api
-  name: Canto product_custom_attributes API
+  name: Canto Product Custom Attributes API
   description: >-
     The product_custom_attributes API from Canto — 2 operation(s) for product_custom_attributes.
   humanURL: https://www.canto.com/api/
@@ -247,7 +247,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-share-links-api
-  name: Canto product_share_links API
+  name: Canto Product Share Links API
   description: >-
     Product Share Links allow you to create shareable links for products that can be accessed
 
@@ -263,7 +263,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-product-types-api
-  name: Canto product_types API
+  name: Canto Product Types API
   description: The product_types API from Canto — 2 operation(s) for product_types.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -277,7 +277,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-products-api
-  name: Canto products API
+  name: Canto Products API
   description: The products API from Canto — 4 operation(s) for products.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -291,7 +291,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-variants-api
-  name: Canto variants API
+  name: Canto Variants API
   description: The variants API from Canto — 4 operation(s) for variants.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -305,7 +305,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-webhook-events-api
-  name: Canto webhook_events API
+  name: Canto Webhook Events API
   description: The webhook_events API from Canto — 2 operation(s) for webhook_events.
   humanURL: https://www.canto.com/api/
   baseURL: https://api.canto.com/
@@ -319,7 +319,7 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 - aid: canto:canto-webhooks-api
-  name: Canto webhooks API
+  name: Canto Webhooks API
   description: >-
     Webhooks are used to notify your application when certain events occur within the system.
 
