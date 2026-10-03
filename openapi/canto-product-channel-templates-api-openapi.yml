@@ -413,24 +413,6 @@ paths:
           content: {}
 components:
   schemas:
-    custom_attribute_mapping:
-      required:
-      - name
-      - product_custom_attribute_id
-      type: object
-      properties:
-        name:
-          type: string
-          description: Name of the custom attribute mapping
-        product_custom_attribute_id:
-          type:
-          - number
-          - 'null'
-          description: ID of the associated product custom attribute
-        required:
-          type: boolean
-          description: Whether this attribute mapping is required
-      additionalProperties: false
     product_channel_template_summary:
       required:
       - id
@@ -467,6 +449,35 @@ components:
           type: string
           format: date-time
           description: Product Channel Template last update timestamp
+      additionalProperties: false
+    custom_attribute_mapping:
+      required:
+      - name
+      - product_custom_attribute_id
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the custom attribute mapping
+        product_custom_attribute_id:
+          type:
+          - number
+          - 'null'
+          description: ID of the associated product custom attribute
+        required:
+          type: boolean
+          description: Whether this attribute mapping is required
+      additionalProperties: false
+    product_channel_templates_response:
+      required:
+      - product_channel_templates
+      type: object
+      properties:
+        product_channel_templates:
+          type: array
+          description: Array of Product Channel Templates
+          items:
+            $ref: '#/components/schemas/product_channel_template_summary'
       additionalProperties: false
     product_channel_template:
       required:
@@ -522,17 +533,6 @@ components:
           - name: Unmapped Attribute
             product_custom_attribute_id: null
             required: false
-      additionalProperties: false
-    product_channel_templates_response:
-      required:
-      - product_channel_templates
-      type: object
-      properties:
-        product_channel_templates:
-          type: array
-          description: Array of Product Channel Templates
-          items:
-            $ref: '#/components/schemas/product_channel_template_summary'
       additionalProperties: false
   securitySchemes:
     bearerAuth:
