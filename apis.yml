@@ -354,6 +354,9 @@ apis:
   - type: Documentation
     url: https://www.canto.com/api/
 common:
+  - type: CapabilityMap
+    url: capabilities/canto-capability-edges.yml
+    name: Canto Business Capability Map
   - type: AgenticAccess
     url: agentic-access/canto-agentic-access.yml
   - type: TrustCenter
