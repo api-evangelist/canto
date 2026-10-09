@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Canto Plans and Pricing
 description: Pricing plans for Canto digital asset management platform. Canto does not publish specific pricing publicly and requires contacting sales for a custom quote. Industry estimates place annual costs at $15,000 to $200,000+ depending on tier and organization size.
 url: https://www.canto.com/pricing/
@@ -47,3 +51,33 @@ plans:
       - Enhanced security protocols
       - Dedicated onboarding and implementation support
       - All Omni Brand Solution features
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Core Essentials
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Enhanced Collaboration
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Omni Brand Solution
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Advanced
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
